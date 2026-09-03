@@ -1,0 +1,39 @@
+name: "&9生命灵结 I"
+description:
+  - "&7携带时获得属性加成："
+  - "&c+10 生命"
+  - "&d+5 再生"
+  - ""
+  - "&e需要炼金等级 20"
+  - ""
+  - "&9稀有护符"
+item: ghast_tear
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - golden_apple
+  - ghast_tear
+  - golden_apple
+
+  - glistering_melon_slice
+  - ecoitems:talisman_core_1 ? ender_eye
+  - glistering_melon_slice
+
+  - golden_apple
+  - ghast_tear
+  - golden_apple
+effects:
+  - id: add_stat
+    args:
+      stat: health
+      amount: 10
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: 5
+conditions:
+  - id: has_skill_level
+    args:
+      skill: alchemy
+      level: 20

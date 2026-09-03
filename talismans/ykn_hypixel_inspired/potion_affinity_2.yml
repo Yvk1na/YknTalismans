@@ -1,0 +1,29 @@
+name: "&a炼药亲和 II"
+description:
+  - "&d药水持续时间 +25%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&a少见的护符"
+higherLevelOf: potion_affinity_1
+item: potion
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:potion_affinity_1
+  - glowstone_dust
+  - talismans:potion_affinity_1
+
+  - glowstone_dust
+  - ecoitems:talisman_core_1 ? ender_eye
+  - glowstone_dust
+
+  - talismans:potion_affinity_1
+  - glowstone_dust
+  - talismans:potion_affinity_1
+effects:
+  - id: potion_duration_multiplier
+    args:
+      multiplier: 1.25
+conditions: []

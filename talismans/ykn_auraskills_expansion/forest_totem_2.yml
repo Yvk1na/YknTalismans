@@ -1,0 +1,42 @@
+name: "&9森灵图腾 II"
+description:
+  - "&7携带时获得属性加成："
+  - "&d+3 再生"
+  - "&a+4% 伐木技能经验"
+  - ""
+  - "&e需要伐木等级 25"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: forest_totem_1
+item: stone_axe
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:forest_totem_1
+  - spruce_log
+  - talismans:forest_totem_1
+
+  - spruce_log
+  - ecoitems:talisman_core_1 ? ender_eye
+  - spruce_log
+
+  - talismans:forest_totem_1
+  - spruce_log
+  - talismans:forest_totem_1
+effects:
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: 3
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.04
+      skills:
+        - foraging
+conditions:
+  - id: has_skill_level
+    args:
+      skill: foraging
+      level: 25

@@ -1,0 +1,39 @@
+name: "&d驯兽师冠徽 V"
+description:
+  - "&c对首领伤害 +15%"
+  - "&c最大生命 +8"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&d神话护符"
+higherLevelOf: beastmaster_crest_4
+item: goat_horn
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:beastmaster_crest_4
+  - nether_star
+  - talismans:beastmaster_crest_4
+
+  - nether_star
+  - ecoitems:talisman_core_3 ? nether_star
+  - nether_star
+
+  - talismans:beastmaster_crest_4
+  - nether_star
+  - talismans:beastmaster_crest_4
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: 1.15
+    filters:
+      is_boss: true
+    triggers:
+      - melee_attack
+      - bow_attack
+      - trident_attack
+  - id: bonus_health
+    args:
+      health: 8
+conditions: []

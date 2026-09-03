@@ -1,0 +1,39 @@
+name: "&9战魂纹章 I"
+description:
+  - "&7携带时获得属性加成："
+  - "&c+8 力量"
+  - "&4+5% 暴击伤害"
+  - ""
+  - "&e需要战斗等级 20"
+  - ""
+  - "&9稀有护符"
+item: blaze_powder
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - blaze_powder
+  - diamond_sword
+  - blaze_powder
+
+  - magma_cream
+  - ecoitems:talisman_core_1 ? ender_eye
+  - magma_cream
+
+  - blaze_powder
+  - diamond_sword
+  - blaze_powder
+effects:
+  - id: add_stat
+    args:
+      stat: strength
+      amount: 8
+  - id: add_stat
+    args:
+      stat: crit_damage
+      amount: 5
+conditions:
+  - id: has_skill_level
+    args:
+      skill: fighting
+      level: 20

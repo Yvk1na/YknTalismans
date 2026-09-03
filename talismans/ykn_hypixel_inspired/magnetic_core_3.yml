@@ -1,0 +1,30 @@
+name: "&5磁引核心 III"
+description:
+  - "&a物品吸取范围 12格"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: magnetic_core_2
+item: recovery_compass
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:magnetic_core_2
+  - lodestone
+  - talismans:magnetic_core_2
+
+  - lodestone
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - lodestone
+
+  - talismans:magnetic_core_2
+  - lodestone
+  - talismans:magnetic_core_2
+effects:
+  - id: item_magnet
+    args:
+      radius: 12
+      pull_strength: 0.60
+conditions: []

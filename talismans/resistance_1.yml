@@ -1,0 +1,27 @@
+name: "&a抗性护符 I"
+description:
+  - "&8受到的实体伤害 -5%"
+  - ""
+  - "&a少见的护符"
+item: player_head texture:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTcyNjI2NGYzN2NjMGVlNDIyZjhlZGIzMTQxZTYxZTJlZDkzNmE4OTdkOTZkODA4NWRjMzVkYzUzOTllZGNmOSJ9fX0=
+craftable: true
+crafting-permission: []
+recipe:
+  - iron_block
+  - obsidian
+  - iron_block
+
+  - obsidian
+  - ecoitems:talisman_core_1 ? ender_eye
+  - obsidian
+
+  - iron_block
+  - obsidian
+  - iron_block
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: 0.95
+    triggers:
+      - take_entity_damage
+conditions: []

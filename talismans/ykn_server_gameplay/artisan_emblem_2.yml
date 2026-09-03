@@ -1,0 +1,33 @@
+name: "&9巧匠徽记 II"
+description:
+  - "&e方块交互距离 +0.50格"
+  - "&e挖掘速度 +5%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: artisan_emblem_1
+item: smithing_table
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:artisan_emblem_1
+  - diamond_block
+  - talismans:artisan_emblem_1
+
+  - diamond_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - diamond_block
+
+  - talismans:artisan_emblem_1
+  - diamond_block
+  - talismans:artisan_emblem_1
+effects:
+  - id: block_reach
+    args:
+      reach: 0.50
+  - id: mining_speed_multiplier
+    args:
+      multiplier: 1.05
+conditions: []

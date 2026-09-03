@@ -1,0 +1,42 @@
+name: "&9奥术典籍 II"
+description:
+  - "&7携带时获得属性加成："
+  - "&b+7 智慧"
+  - "&a+4% 附魔技能经验"
+  - ""
+  - "&e需要附魔等级 25"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: arcane_tome_1
+item: bookshelf
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:arcane_tome_1
+  - lapis_block
+  - talismans:arcane_tome_1
+
+  - lapis_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - lapis_block
+
+  - talismans:arcane_tome_1
+  - lapis_block
+  - talismans:arcane_tome_1
+effects:
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: 7
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.04
+      skills:
+        - enchanting
+conditions:
+  - id: has_skill_level
+    args:
+      skill: enchanting
+      level: 25

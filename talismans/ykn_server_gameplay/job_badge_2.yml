@@ -1,0 +1,40 @@
+name: "&9百业勋章 II"
+description:
+  - "&a生产技能经验 +5%"
+  - "&a幸运 +4"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: job_badge_1
+item: iron_chestplate
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:job_badge_1
+  - gold_block
+  - talismans:job_badge_1
+
+  - gold_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - gold_block
+
+  - talismans:job_badge_1
+  - gold_block
+  - talismans:job_badge_1
+effects:
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.05
+      skills:
+        - farming
+        - foraging
+        - mining
+        - fishing
+        - excavation
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 4
+conditions: []

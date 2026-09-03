@@ -1,0 +1,33 @@
+name: "&5虚空之锚 II"
+description:
+  - "&f安全坠落距离 +20格"
+  - "&b护甲韧性 +2"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: void_anchor_1
+item: respawn_anchor
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:void_anchor_1
+  - crying_obsidian
+  - talismans:void_anchor_1
+
+  - crying_obsidian
+  - ecoitems:talisman_core_1 ? ender_eye
+  - crying_obsidian
+
+  - talismans:void_anchor_1
+  - crying_obsidian
+  - talismans:void_anchor_1
+effects:
+  - id: safe_fall_distance
+    args:
+      distance: 20
+  - id: armor_toughness
+    args:
+      points: 2
+conditions: []

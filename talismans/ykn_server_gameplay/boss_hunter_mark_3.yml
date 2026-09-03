@@ -1,0 +1,39 @@
+name: "&5首领猎印 III"
+description:
+  - "&c对首领伤害 +7%"
+  - "&e攻击速度 +4%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: boss_hunter_mark_2
+item: nether_star
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:boss_hunter_mark_2
+  - wither_skeleton_skull
+  - talismans:boss_hunter_mark_2
+
+  - wither_skeleton_skull
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - wither_skeleton_skull
+
+  - talismans:boss_hunter_mark_2
+  - wither_skeleton_skull
+  - talismans:boss_hunter_mark_2
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: 1.07
+    filters:
+      is_boss: true
+    triggers:
+      - melee_attack
+      - bow_attack
+      - trident_attack
+  - id: attack_speed_multiplier
+    args:
+      multiplier: 1.04
+conditions: []

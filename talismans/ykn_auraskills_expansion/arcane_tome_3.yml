@@ -1,0 +1,42 @@
+name: "&5奥术典籍 III"
+description:
+  - "&7携带时获得属性加成："
+  - "&b+12 智慧"
+  - "&a+7% 附魔技能经验"
+  - ""
+  - "&e需要附魔等级 45"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: arcane_tome_2
+item: enchanting_table
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:arcane_tome_2
+  - amethyst_shard
+  - talismans:arcane_tome_2
+
+  - amethyst_shard
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - amethyst_shard
+
+  - talismans:arcane_tome_2
+  - amethyst_shard
+  - talismans:arcane_tome_2
+effects:
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: 12
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.07
+      skills:
+        - enchanting
+conditions:
+  - id: has_skill_level
+    args:
+      skill: enchanting
+      level: 45

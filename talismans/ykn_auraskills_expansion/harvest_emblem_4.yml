@@ -1,0 +1,42 @@
+name: "&6丰收徽记 IV"
+description:
+  - "&7携带时获得属性加成："
+  - "&2+10 幸运"
+  - "&a+10% 农耕技能经验"
+  - ""
+  - "&e需要农耕等级 70"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: harvest_emblem_3
+item: golden_hoe
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:harvest_emblem_3
+  - hay_block
+  - talismans:harvest_emblem_3
+
+  - hay_block
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - hay_block
+
+  - talismans:harvest_emblem_3
+  - hay_block
+  - talismans:harvest_emblem_3
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 10
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.10
+      skills:
+        - farming
+conditions:
+  - id: has_skill_level
+    args:
+      skill: farming
+      level: 70

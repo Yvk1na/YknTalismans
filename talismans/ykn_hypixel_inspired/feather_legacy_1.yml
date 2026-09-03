@@ -1,0 +1,26 @@
+name: "&8落羽传承"
+description:
+  - "&f安全坠落距离 +5格"
+  - ""
+  - "&8普通护符"
+item: feather
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - feather
+  - feather
+  - feather
+
+  - feather
+  - ecoitems:talisman_core_1 ? ender_eye
+  - feather
+
+  - feather
+  - feather
+  - feather
+effects:
+  - id: safe_fall_distance
+    args:
+      distance: 5
+conditions: []

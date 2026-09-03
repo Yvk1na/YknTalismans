@@ -1,0 +1,28 @@
+name: "&8炼药亲和 I"
+description:
+  - "&d药水持续时间 +10%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&8普通护符"
+item: nether_wart
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - nether_wart
+  - nether_wart
+  - nether_wart
+
+  - nether_wart
+  - ecoitems:talisman_core_1 ? ender_eye
+  - nether_wart
+
+  - nether_wart
+  - nether_wart
+  - nether_wart
+effects:
+  - id: potion_duration_multiplier
+    args:
+      multiplier: 1.10
+conditions: []

@@ -1,0 +1,34 @@
+name: "&6赏金行囊 IV"
+description:
+  - "&6物品掉落数量 +16%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: bounty_satchel_3
+item: shulker_box
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:bounty_satchel_3
+  - shulker_shell
+  - talismans:bounty_satchel_3
+
+  - shulker_shell
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - shulker_shell
+
+  - talismans:bounty_satchel_3
+  - shulker_shell
+  - talismans:bounty_satchel_3
+effects:
+  - id: multiply_drops
+    args:
+      multiplier: 1.16
+    triggers:
+      - block_item_drop
+      - entity_item_drop
+      - catch_fish
+      - shear
+conditions: []

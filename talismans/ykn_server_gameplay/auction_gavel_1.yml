@@ -1,0 +1,30 @@
+name: "&a拍卖行槌"
+description:
+  - "&a原版幸运 +1"
+  - "&b原版经验获取 +2%"
+  - ""
+  - "&a少见的护符"
+item: wooden_axe
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - gold_ingot
+  - gold_ingot
+  - gold_ingot
+
+  - gold_ingot
+  - ecoitems:talisman_core_1 ? ender_eye
+  - gold_ingot
+
+  - gold_ingot
+  - gold_ingot
+  - gold_ingot
+effects:
+  - id: add_luck
+    args:
+      amount: 1
+  - id: xp_multiplier
+    args:
+      multiplier: 1.02
+conditions: []

@@ -1,0 +1,34 @@
+name: "&a疾风之羽 I"
+description:
+  - "&7携带时获得属性加成："
+  - "&f+10 速度"
+  - ""
+  - "&e需要敏捷等级 20"
+  - ""
+  - "&a少见的护符"
+item: wind_charge
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - feather
+  - wind_charge
+  - feather
+
+  - phantom_membrane
+  - ecoitems:talisman_core_1 ? ender_eye
+  - phantom_membrane
+
+  - feather
+  - wind_charge
+  - feather
+effects:
+  - id: add_stat
+    args:
+      stat: speed
+      amount: 10
+conditions:
+  - id: has_skill_level
+    args:
+      skill: agility
+      level: 20

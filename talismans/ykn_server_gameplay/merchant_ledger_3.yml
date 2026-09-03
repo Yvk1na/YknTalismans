@@ -1,0 +1,33 @@
+name: "&6商会秘账 III"
+description:
+  - "&6商店出售价格 +6%"
+  - "&a村民交易消耗 -6%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: merchant_ledger_2
+item: written_book
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:merchant_ledger_2
+  - diamond_block
+  - talismans:merchant_ledger_2
+
+  - diamond_block
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - diamond_block
+
+  - talismans:merchant_ledger_2
+  - diamond_block
+  - talismans:merchant_ledger_2
+effects:
+  - id: sell_multiplier
+    args:
+      multiplier: 1.06
+  - id: villager_trade_multiplier
+    args:
+      multiplier: 0.94
+conditions: []

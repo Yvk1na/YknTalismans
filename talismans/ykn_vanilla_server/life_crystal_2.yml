@@ -1,0 +1,29 @@
+name: "&9生命结晶 II"
+description:
+  - "&c最大生命 +2"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: life_crystal_1
+item: golden_apple
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:life_crystal_1
+  - gold_block
+  - talismans:life_crystal_1
+
+  - gold_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - gold_block
+
+  - talismans:life_crystal_1
+  - gold_block
+  - talismans:life_crystal_1
+effects:
+  - id: bonus_health
+    args:
+      health: 2
+conditions: []

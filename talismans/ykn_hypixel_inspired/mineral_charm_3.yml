@@ -1,0 +1,33 @@
+name: "&5矿物秘符 III"
+description:
+  - "&e挖掘速度 +7%"
+  - "&2原版幸运 +4"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: mineral_charm_2
+item: diamond
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:mineral_charm_2
+  - diamond_block
+  - talismans:mineral_charm_2
+
+  - diamond_block
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - diamond_block
+
+  - talismans:mineral_charm_2
+  - diamond_block
+  - talismans:mineral_charm_2
+effects:
+  - id: mining_speed_multiplier
+    args:
+      multiplier: 1.07
+  - id: add_luck
+    args:
+      amount: 4
+conditions: []

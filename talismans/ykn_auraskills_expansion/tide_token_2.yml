@@ -1,0 +1,42 @@
+name: "&9潮汐之证 II"
+description:
+  - "&7携带时获得属性加成："
+  - "&2+4 幸运"
+  - "&a+4% 钓鱼技能经验"
+  - ""
+  - "&e需要钓鱼等级 25"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: tide_token_1
+item: nautilus_shell
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:tide_token_1
+  - salmon
+  - talismans:tide_token_1
+
+  - salmon
+  - ecoitems:talisman_core_1 ? ender_eye
+  - salmon
+
+  - talismans:tide_token_1
+  - salmon
+  - talismans:tide_token_1
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 4
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.04
+      skills:
+        - fishing
+conditions:
+  - id: has_skill_level
+    args:
+      skill: fishing
+      level: 25

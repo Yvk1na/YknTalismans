@@ -1,0 +1,34 @@
+name: "&9泰坦守印 I"
+description:
+  - "&7携带时获得属性加成："
+  - "&9+10 韧性"
+  - ""
+  - "&e需要防御等级 20"
+  - ""
+  - "&9稀有护符"
+item: shield
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - obsidian
+  - iron_block
+  - obsidian
+
+  - shield
+  - ecoitems:talisman_core_1 ? ender_eye
+  - shield
+
+  - obsidian
+  - iron_block
+  - obsidian
+effects:
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: 10
+conditions:
+  - id: has_skill_level
+    args:
+      skill: defense
+      level: 20

@@ -1,0 +1,35 @@
+name: "&5贤者之眼 III"
+description:
+  - "&7携带时获得属性加成："
+  - "&b+40 智慧"
+  - ""
+  - "&e需要附魔等级 80"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: sage_eye_2
+item: echo_shard
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:sage_eye_2
+  - echo_shard
+  - talismans:sage_eye_2
+
+  - echo_shard
+  - ecoitems:talisman_core_3 ? nether_star
+  - echo_shard
+
+  - talismans:sage_eye_2
+  - echo_shard
+  - talismans:sage_eye_2
+effects:
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: 40
+conditions:
+  - id: has_skill_level
+    args:
+      skill: enchanting
+      level: 80

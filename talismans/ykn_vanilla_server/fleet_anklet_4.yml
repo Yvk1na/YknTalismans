@@ -1,0 +1,29 @@
+name: "&5迅捷脚环 IV"
+description:
+  - "&f移动速度 +14%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: fleet_anklet_3
+item: elytra
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:fleet_anklet_3
+  - breeze_rod
+  - talismans:fleet_anklet_3
+
+  - breeze_rod
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - breeze_rod
+
+  - talismans:fleet_anklet_3
+  - breeze_rod
+  - talismans:fleet_anklet_3
+effects:
+  - id: movement_speed_multiplier
+    args:
+      multiplier: 1.14
+conditions: []

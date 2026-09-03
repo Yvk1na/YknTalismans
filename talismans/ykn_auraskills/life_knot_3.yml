@@ -1,0 +1,40 @@
+name: "&6生命灵结 III"
+description:
+  - "&7携带时获得属性加成："
+  - "&c+50 生命"
+  - "&d+25 再生"
+  - ""
+  - "&e需要炼金等级 80"
+  - ""
+  - "&6传说护符"
+higherLevelOf: life_knot_2
+item: dragon_breath
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:life_knot_2
+  - dragon_breath
+  - talismans:life_knot_2
+
+  - dragon_breath
+  - ecoitems:talisman_core_3 ? nether_star
+  - dragon_breath
+
+  - talismans:life_knot_2
+  - dragon_breath
+  - talismans:life_knot_2
+effects:
+  - id: add_stat
+    args:
+      stat: health
+      amount: 50
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: 25
+conditions:
+  - id: has_skill_level
+    args:
+      skill: alchemy
+      level: 80

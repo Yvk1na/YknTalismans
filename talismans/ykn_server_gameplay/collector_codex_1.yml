@@ -1,0 +1,38 @@
+name: "&a收藏家图鉴 I"
+description:
+  - "&6物品掉落数量 +1%"
+  - "&a物品吸取范围 2格"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&a少见的护符"
+item: bundle
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - chest
+  - rabbit_hide
+  - chest
+
+  - rabbit_hide
+  - ecoitems:talisman_core_1 ? ender_eye
+  - rabbit_hide
+
+  - chest
+  - rabbit_hide
+  - chest
+effects:
+  - id: multiply_drops
+    args:
+      multiplier: 1.01
+    triggers:
+      - block_item_drop
+      - entity_item_drop
+      - catch_fish
+      - shear
+  - id: item_magnet
+    args:
+      radius: 2
+      pull_strength: 0.15
+conditions: []

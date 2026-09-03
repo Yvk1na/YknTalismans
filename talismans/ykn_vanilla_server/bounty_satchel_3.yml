@@ -1,0 +1,34 @@
+name: "&5赏金行囊 III"
+description:
+  - "&6物品掉落数量 +10%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: bounty_satchel_2
+item: ender_chest
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:bounty_satchel_2
+  - ender_eye
+  - talismans:bounty_satchel_2
+
+  - ender_eye
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - ender_eye
+
+  - talismans:bounty_satchel_2
+  - ender_eye
+  - talismans:bounty_satchel_2
+effects:
+  - id: multiply_drops
+    args:
+      multiplier: 1.10
+    triggers:
+      - block_item_drop
+      - entity_item_drop
+      - catch_fish
+      - shear
+conditions: []

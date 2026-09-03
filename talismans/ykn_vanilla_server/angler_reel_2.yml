@@ -1,0 +1,29 @@
+name: "&9垂钓者线轮 II"
+description:
+  - "&b收杆速度 +25%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: angler_reel_1
+item: nautilus_shell
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:angler_reel_1
+  - nautilus_shell
+  - talismans:angler_reel_1
+
+  - nautilus_shell
+  - ecoitems:talisman_core_1 ? ender_eye
+  - nautilus_shell
+
+  - talismans:angler_reel_1
+  - nautilus_shell
+  - talismans:angler_reel_1
+effects:
+  - id: reel_speed_multiplier
+    args:
+      multiplier: 1.25
+conditions: []

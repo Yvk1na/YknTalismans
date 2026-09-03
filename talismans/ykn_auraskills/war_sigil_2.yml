@@ -1,0 +1,40 @@
+name: "&5战魂纹章 II"
+description:
+  - "&7携带时获得属性加成："
+  - "&c+20 力量"
+  - "&4+12% 暴击伤害"
+  - ""
+  - "&e需要战斗等级 50"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: war_sigil_1
+item: netherite_scrap
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:war_sigil_1
+  - blaze_rod
+  - talismans:war_sigil_1
+
+  - netherite_scrap
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - netherite_scrap
+
+  - talismans:war_sigil_1
+  - blaze_rod
+  - talismans:war_sigil_1
+effects:
+  - id: add_stat
+    args:
+      stat: strength
+      amount: 20
+  - id: add_stat
+    args:
+      stat: crit_damage
+      amount: 12
+conditions:
+  - id: has_skill_level
+    args:
+      skill: fighting
+      level: 50

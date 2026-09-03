@@ -1,0 +1,47 @@
+name: "&6斗士勋章 IV"
+description:
+  - "&7携带时获得属性加成："
+  - "&c+20 力量"
+  - "&4+12% 暴击伤害"
+  - "&a+10% 战斗技能经验"
+  - ""
+  - "&e需要战斗等级 70"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: fighter_medal_3
+item: netherite_sword
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:fighter_medal_3
+  - heavy_core
+  - talismans:fighter_medal_3
+
+  - heavy_core
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - heavy_core
+
+  - talismans:fighter_medal_3
+  - heavy_core
+  - talismans:fighter_medal_3
+effects:
+  - id: add_stat
+    args:
+      stat: strength
+      amount: 20
+  - id: add_stat
+    args:
+      stat: crit_damage
+      amount: 12
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.10
+      skills:
+        - fighting
+conditions:
+  - id: has_skill_level
+    args:
+      skill: fighting
+      level: 70

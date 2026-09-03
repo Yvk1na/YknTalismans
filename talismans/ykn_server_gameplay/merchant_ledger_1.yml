@@ -1,0 +1,32 @@
+name: "&9商会秘账 I"
+description:
+  - "&6商店出售价格 +1%"
+  - "&a村民交易消耗 -1%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+item: paper
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - paper
+  - gold_block
+  - paper
+
+  - gold_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - gold_block
+
+  - paper
+  - gold_block
+  - paper
+effects:
+  - id: sell_multiplier
+    args:
+      multiplier: 1.01
+  - id: villager_trade_multiplier
+    args:
+      multiplier: 0.99
+conditions: []

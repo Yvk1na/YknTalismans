@@ -1,0 +1,81 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.willfp.talismans'
+version = '1.1'
+
+def serverRoot = providers.gradleProperty('serverRoot')
+        .orElse('F:/mc服务端/Paper-1.21.10-Inf-Skyblock')
+        .get()
+def originalPlugin = [
+        file("${serverRoot}/plugins/Talismans-2026.31.jar"),
+        file("${serverRoot}/plugins/Talismans-2026.31-admin.jar"),
+        file("${serverRoot}/plugins/Talismans-Ykn-1.1.jar")
+].find { it.isFile() }
+
+if (originalPlugin == null) {
+    throw new GradleException('No Talismans base JAR was found in the server plugins directory.')
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['com']
+            include 'willfp/talismans/command/CommandTalismans.java'
+            include 'willfp/talismans/command/CommandAdmin.java'
+            include 'willfp/talismans/admin/**/*.java'
+            include 'willfp/talismans/display/TalismanDisplay.java'
+            include 'willfp/talismans/talismans/util/BlockPlaceListener.java'
+        }
+        resources.srcDirs = []
+    }
+}
+
+dependencies {
+    compileOnly files(originalPlugin)
+    compileOnly files("${serverRoot}/plugins/eco-2026.35.jar")
+    compileOnly files("${serverRoot}/plugins/libreforge-2026.31.jar")
+    compileOnly fileTree("${serverRoot}/libraries") {
+        include '**/*.jar'
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    // Use JDK 25 while retaining compatibility with servers that still run Java 21.
+    options.release = 21
+}
+
+tasks.jar {
+    enabled = false
+}
+
+tasks.register('patchedJar', Jar) {
+    dependsOn tasks.classes
+    archiveFileName = 'Talismans-Ykn-1.1.jar'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    from(sourceSets.main.output)
+    from('.') {
+        include 'plugin.yml'
+        include 'talismans/**/*.yml'
+    }
+    from(zipTree(originalPlugin)) {
+        exclude 'META-INF/*.SF', 'META-INF/*.RSA', 'META-INF/*.DSA'
+        // The project talisman directory is authoritative. Excluding bundled
+        // configs here prevents deleted talismans from being inherited from a
+        // previously built Ykn JAR used as the patch base.
+        exclude 'talismans/**/*.yml'
+    }
+}
+
+tasks.build {
+    dependsOn tasks.patchedJar
+}

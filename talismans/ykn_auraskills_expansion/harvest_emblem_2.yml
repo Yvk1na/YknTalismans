@@ -1,0 +1,42 @@
+name: "&9丰收徽记 II"
+description:
+  - "&7携带时获得属性加成："
+  - "&2+4 幸运"
+  - "&a+4% 农耕技能经验"
+  - ""
+  - "&e需要农耕等级 25"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: harvest_emblem_1
+item: carrot
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:harvest_emblem_1
+  - carrot
+  - talismans:harvest_emblem_1
+
+  - carrot
+  - ecoitems:talisman_core_1 ? ender_eye
+  - carrot
+
+  - talismans:harvest_emblem_1
+  - carrot
+  - talismans:harvest_emblem_1
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 4
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.04
+      skills:
+        - farming
+conditions:
+  - id: has_skill_level
+    args:
+      skill: farming
+      level: 25

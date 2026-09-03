@@ -1,0 +1,28 @@
+name: "&a钢铁护印 I"
+description:
+  - "&9护甲值 +1"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&a少见的护符"
+item: iron_nugget
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - iron_ingot
+  - iron_ingot
+  - iron_ingot
+
+  - iron_ingot
+  - ecoitems:talisman_core_1 ? ender_eye
+  - iron_ingot
+
+  - iron_ingot
+  - iron_ingot
+  - iron_ingot
+effects:
+  - id: armor
+    args:
+      points: 1
+conditions: []

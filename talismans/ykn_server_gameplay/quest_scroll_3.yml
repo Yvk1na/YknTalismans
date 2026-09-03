@@ -1,0 +1,33 @@
+name: "&5冒险任务卷 III"
+description:
+  - "&b原版经验获取 +15%"
+  - "&f移动速度 +5%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: quest_scroll_2
+item: enchanted_book
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:quest_scroll_2
+  - dragon_breath
+  - talismans:quest_scroll_2
+
+  - dragon_breath
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - dragon_breath
+
+  - talismans:quest_scroll_2
+  - dragon_breath
+  - talismans:quest_scroll_2
+effects:
+  - id: xp_multiplier
+    args:
+      multiplier: 1.15
+  - id: movement_speed_multiplier
+    args:
+      multiplier: 1.05
+conditions: []

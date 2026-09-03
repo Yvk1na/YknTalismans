@@ -1,0 +1,33 @@
+name: "&5商会秘账 II"
+description:
+  - "&6商店出售价格 +3%"
+  - "&a村民交易消耗 -3%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: merchant_ledger_1
+item: book
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:merchant_ledger_1
+  - emerald_block
+  - talismans:merchant_ledger_1
+
+  - emerald_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - emerald_block
+
+  - talismans:merchant_ledger_1
+  - emerald_block
+  - talismans:merchant_ledger_1
+effects:
+  - id: sell_multiplier
+    args:
+      multiplier: 1.03
+  - id: villager_trade_multiplier
+    args:
+      multiplier: 0.97
+conditions: []

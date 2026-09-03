@@ -1,0 +1,42 @@
+name: "&9逐风徽章 II"
+description:
+  - "&7携带时获得属性加成："
+  - "&f+7 速度"
+  - "&a+4% 敏捷技能经验"
+  - ""
+  - "&e需要敏捷等级 25"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: agility_badge_1
+item: rabbit_foot
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:agility_badge_1
+  - rabbit_foot
+  - talismans:agility_badge_1
+
+  - rabbit_foot
+  - ecoitems:talisman_core_1 ? ender_eye
+  - rabbit_foot
+
+  - talismans:agility_badge_1
+  - rabbit_foot
+  - talismans:agility_badge_1
+effects:
+  - id: add_stat
+    args:
+      stat: speed
+      amount: 7
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.04
+      skills:
+        - agility
+conditions:
+  - id: has_skill_level
+    args:
+      skill: agility
+      level: 25

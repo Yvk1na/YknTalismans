@@ -1,0 +1,32 @@
+name: "&a巧匠徽记 I"
+description:
+  - "&e方块交互距离 +0.25格"
+  - "&e挖掘速度 +2%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&a少见的护符"
+item: crafting_table
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - crafting_table
+  - iron_block
+  - crafting_table
+
+  - iron_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - iron_block
+
+  - crafting_table
+  - iron_block
+  - crafting_table
+effects:
+  - id: block_reach
+    args:
+      reach: 0.25
+  - id: mining_speed_multiplier
+    args:
+      multiplier: 1.02
+conditions: []

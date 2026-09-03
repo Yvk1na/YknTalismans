@@ -1,0 +1,35 @@
+name: "&9贤者之眼 II"
+description:
+  - "&7携带时获得属性加成："
+  - "&b+20 智慧"
+  - ""
+  - "&e需要附魔等级 50"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: sage_eye_1
+item: experience_bottle
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:sage_eye_1
+  - enchanting_table
+  - talismans:sage_eye_1
+
+  - experience_bottle
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - experience_bottle
+
+  - talismans:sage_eye_1
+  - enchanting_table
+  - talismans:sage_eye_1
+effects:
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: 20
+conditions:
+  - id: has_skill_level
+    args:
+      skill: enchanting
+      level: 50

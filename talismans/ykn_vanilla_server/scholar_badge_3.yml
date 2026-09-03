@@ -1,0 +1,29 @@
+name: "&9学者徽章 III"
+description:
+  - "&a原版经验获取 +13%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: scholar_badge_2
+item: enchanting_table
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:scholar_badge_2
+  - amethyst_shard
+  - talismans:scholar_badge_2
+
+  - amethyst_shard
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - amethyst_shard
+
+  - talismans:scholar_badge_2
+  - amethyst_shard
+  - talismans:scholar_badge_2
+effects:
+  - id: xp_multiplier
+    args:
+      multiplier: 1.13
+conditions: []

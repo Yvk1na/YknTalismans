@@ -1,0 +1,42 @@
+name: "&6潮汐之证 IV"
+description:
+  - "&7携带时获得属性加成："
+  - "&2+10 幸运"
+  - "&a+10% 钓鱼技能经验"
+  - ""
+  - "&e需要钓鱼等级 70"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: tide_token_3
+item: trident
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:tide_token_3
+  - prismarine_crystals
+  - talismans:tide_token_3
+
+  - prismarine_crystals
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - prismarine_crystals
+
+  - talismans:tide_token_3
+  - prismarine_crystals
+  - talismans:tide_token_3
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 10
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.10
+      skills:
+        - fishing
+conditions:
+  - id: has_skill_level
+    args:
+      skill: fishing
+      level: 70

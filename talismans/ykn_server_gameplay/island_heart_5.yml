@@ -1,0 +1,33 @@
+name: "&d空岛之心 V"
+description:
+  - "&c最大生命 +18"
+  - "&9护甲值 +7"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&d神话护符"
+higherLevelOf: island_heart_4
+item: nether_star
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:island_heart_4
+  - nether_star
+  - talismans:island_heart_4
+
+  - nether_star
+  - ecoitems:talisman_core_3 ? nether_star
+  - nether_star
+
+  - talismans:island_heart_4
+  - nether_star
+  - talismans:island_heart_4
+effects:
+  - id: bonus_health
+    args:
+      health: 18
+  - id: armor
+    args:
+      points: 7
+conditions: []

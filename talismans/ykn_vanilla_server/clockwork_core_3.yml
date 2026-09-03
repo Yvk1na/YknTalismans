@@ -1,0 +1,29 @@
+name: "&5发条核心 III"
+description:
+  - "&e攻击速度 +12%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: clockwork_core_2
+item: golden_sword
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:clockwork_core_2
+  - gold_ingot
+  - talismans:clockwork_core_2
+
+  - gold_ingot
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - gold_ingot
+
+  - talismans:clockwork_core_2
+  - gold_ingot
+  - talismans:clockwork_core_2
+effects:
+  - id: attack_speed_multiplier
+    args:
+      multiplier: 1.12
+conditions: []

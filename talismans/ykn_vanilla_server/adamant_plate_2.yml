@@ -1,0 +1,29 @@
+name: "&9坚钢铭牌 II"
+description:
+  - "&9护甲韧性 +2"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: adamant_plate_1
+item: turtle_helmet
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:adamant_plate_1
+  - diamond_block
+  - talismans:adamant_plate_1
+
+  - diamond_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - diamond_block
+
+  - talismans:adamant_plate_1
+  - diamond_block
+  - talismans:adamant_plate_1
+effects:
+  - id: armor_toughness
+    args:
+      points: 2
+conditions: []

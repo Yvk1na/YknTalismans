@@ -1,0 +1,42 @@
+name: "&6矿脉罗盘 IV"
+description:
+  - "&7携带时获得属性加成："
+  - "&2+10 幸运"
+  - "&a+10% 采矿技能经验"
+  - ""
+  - "&e需要采矿等级 70"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: mining_compass_3
+item: diamond_pickaxe
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:mining_compass_3
+  - ancient_debris
+  - talismans:mining_compass_3
+
+  - ancient_debris
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - ancient_debris
+
+  - talismans:mining_compass_3
+  - ancient_debris
+  - talismans:mining_compass_3
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 10
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.10
+      skills:
+        - mining
+conditions:
+  - id: has_skill_level
+    args:
+      skill: mining
+      level: 70

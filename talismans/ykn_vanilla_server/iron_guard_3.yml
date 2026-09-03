@@ -1,0 +1,29 @@
+name: "&5钢铁护印 III"
+description:
+  - "&9护甲值 +4"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: iron_guard_2
+item: diamond_chestplate
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:iron_guard_2
+  - diamond_block
+  - talismans:iron_guard_2
+
+  - diamond_block
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - diamond_block
+
+  - talismans:iron_guard_2
+  - diamond_block
+  - talismans:iron_guard_2
+effects:
+  - id: armor
+    args:
+      points: 4
+conditions: []

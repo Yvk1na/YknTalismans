@@ -1,0 +1,39 @@
+name: "&d收藏家图鉴 V"
+description:
+  - "&6物品掉落数量 +20%"
+  - "&a物品吸取范围 16格"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&d神话护符"
+higherLevelOf: collector_codex_4
+item: dragon_egg
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:collector_codex_4
+  - nether_star
+  - talismans:collector_codex_4
+
+  - nether_star
+  - ecoitems:talisman_core_3 ? nether_star
+  - nether_star
+
+  - talismans:collector_codex_4
+  - nether_star
+  - talismans:collector_codex_4
+effects:
+  - id: multiply_drops
+    args:
+      multiplier: 1.20
+    triggers:
+      - block_item_drop
+      - entity_item_drop
+      - catch_fish
+      - shear
+  - id: item_magnet
+    args:
+      radius: 16
+      pull_strength: 0.85
+conditions: []

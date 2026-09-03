@@ -1,0 +1,33 @@
+name: "&d地牢魂灯 IV"
+description:
+  - "&9护甲值 +7"
+  - "&c生命恢复效果 +28%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&d神话护符"
+higherLevelOf: dungeon_lantern_3
+item: totem_of_undying
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:dungeon_lantern_3
+  - totem_of_undying
+  - talismans:dungeon_lantern_3
+
+  - totem_of_undying
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - totem_of_undying
+
+  - talismans:dungeon_lantern_3
+  - totem_of_undying
+  - talismans:dungeon_lantern_3
+effects:
+  - id: armor
+    args:
+      points: 7
+  - id: regen_multiplier
+    args:
+      multiplier: 1.28
+conditions: []

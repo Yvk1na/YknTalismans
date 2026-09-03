@@ -1,0 +1,42 @@
+name: "&9考古圣物 II"
+description:
+  - "&7携带时获得属性加成："
+  - "&2+4 幸运"
+  - "&a+4% 挖掘技能经验"
+  - ""
+  - "&e需要挖掘等级 25"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: excavator_relic_1
+item: brick
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:excavator_relic_1
+  - brick
+  - talismans:excavator_relic_1
+
+  - brick
+  - ecoitems:talisman_core_1 ? ender_eye
+  - brick
+
+  - talismans:excavator_relic_1
+  - brick
+  - talismans:excavator_relic_1
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 4
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.04
+      skills:
+        - excavation
+conditions:
+  - id: has_skill_level
+    args:
+      skill: excavation
+      level: 25

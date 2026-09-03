@@ -1,0 +1,33 @@
+name: "&9冒险任务卷 II"
+description:
+  - "&b原版经验获取 +8%"
+  - "&f移动速度 +3%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: quest_scroll_1
+item: map
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:quest_scroll_1
+  - experience_bottle
+  - talismans:quest_scroll_1
+
+  - experience_bottle
+  - ecoitems:talisman_core_1 ? ender_eye
+  - experience_bottle
+
+  - talismans:quest_scroll_1
+  - experience_bottle
+  - talismans:quest_scroll_1
+effects:
+  - id: xp_multiplier
+    args:
+      multiplier: 1.08
+  - id: movement_speed_multiplier
+    args:
+      multiplier: 1.03
+conditions: []

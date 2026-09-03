@@ -1,0 +1,42 @@
+name: "&5矿脉罗盘 III"
+description:
+  - "&7携带时获得属性加成："
+  - "&2+7 幸运"
+  - "&a+7% 采矿技能经验"
+  - ""
+  - "&e需要采矿等级 45"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: mining_compass_2
+item: golden_pickaxe
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:mining_compass_2
+  - diamond
+  - talismans:mining_compass_2
+
+  - diamond
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - diamond
+
+  - talismans:mining_compass_2
+  - diamond
+  - talismans:mining_compass_2
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 7
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.07
+      skills:
+        - mining
+conditions:
+  - id: has_skill_level
+    args:
+      skill: mining
+      level: 45

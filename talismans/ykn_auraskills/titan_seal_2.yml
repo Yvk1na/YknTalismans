@@ -1,0 +1,35 @@
+name: "&5泰坦守印 II"
+description:
+  - "&7携带时获得属性加成："
+  - "&9+25 韧性"
+  - ""
+  - "&e需要防御等级 50"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: titan_seal_1
+item: diamond_chestplate
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:titan_seal_1
+  - diamond_block
+  - talismans:titan_seal_1
+
+  - diamond_block
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - diamond_block
+
+  - talismans:titan_seal_1
+  - diamond_block
+  - talismans:titan_seal_1
+effects:
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: 25
+conditions:
+  - id: has_skill_level
+    args:
+      skill: defense
+      level: 50

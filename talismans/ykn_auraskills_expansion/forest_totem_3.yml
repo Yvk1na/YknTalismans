@@ -1,0 +1,42 @@
+name: "&5森灵图腾 III"
+description:
+  - "&7携带时获得属性加成："
+  - "&d+5 再生"
+  - "&a+7% 伐木技能经验"
+  - ""
+  - "&e需要伐木等级 45"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: forest_totem_2
+item: iron_axe
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:forest_totem_2
+  - jungle_log
+  - talismans:forest_totem_2
+
+  - jungle_log
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - jungle_log
+
+  - talismans:forest_totem_2
+  - jungle_log
+  - talismans:forest_totem_2
+effects:
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: 5
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.07
+      skills:
+        - foraging
+conditions:
+  - id: has_skill_level
+    args:
+      skill: foraging
+      level: 45

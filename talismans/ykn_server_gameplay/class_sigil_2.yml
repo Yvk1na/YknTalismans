@@ -1,0 +1,35 @@
+name: "&9职业秘印 II"
+description:
+  - "&c力量 +4"
+  - "&9韧性 +3"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: class_sigil_1
+item: blue_banner
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:class_sigil_1
+  - gold_block
+  - talismans:class_sigil_1
+
+  - gold_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - gold_block
+
+  - talismans:class_sigil_1
+  - gold_block
+  - talismans:class_sigil_1
+effects:
+  - id: add_stat
+    args:
+      stat: strength
+      amount: 4
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: 3
+conditions: []

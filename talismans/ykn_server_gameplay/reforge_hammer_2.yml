@@ -1,0 +1,33 @@
+name: "&5重铸战锤 II"
+description:
+  - "&b护甲韧性 +2"
+  - "&e攻击速度 +5%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: reforge_hammer_1
+item: diamond_pickaxe
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:reforge_hammer_1
+  - diamond_block
+  - talismans:reforge_hammer_1
+
+  - diamond_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - diamond_block
+
+  - talismans:reforge_hammer_1
+  - diamond_block
+  - talismans:reforge_hammer_1
+effects:
+  - id: armor_toughness
+    args:
+      points: 2
+  - id: attack_speed_multiplier
+    args:
+      multiplier: 1.05
+conditions: []

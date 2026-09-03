@@ -1,0 +1,33 @@
+name: "&d战争契约 V"
+description:
+  - "&c造成伤害 +16%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&d神话护符"
+higherLevelOf: war_contract_4
+item: mace
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:war_contract_4
+  - nether_star
+  - talismans:war_contract_4
+
+  - nether_star
+  - ecoitems:talisman_core_3 ? nether_star
+  - nether_star
+
+  - talismans:war_contract_4
+  - nether_star
+  - talismans:war_contract_4
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: 1.16
+    triggers:
+      - melee_attack
+      - bow_attack
+      - trident_attack
+conditions: []

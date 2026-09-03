@@ -1,0 +1,28 @@
+name: "&8迅捷脚环 I"
+description:
+  - "&f移动速度 +2%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&8普通护符"
+item: leather_boots
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - sugar
+  - feather
+  - sugar
+
+  - feather
+  - ecoitems:talisman_core_1 ? ender_eye
+  - feather
+
+  - sugar
+  - feather
+  - sugar
+effects:
+  - id: movement_speed_multiplier
+    args:
+      multiplier: 1.02
+conditions: []

@@ -1,0 +1,33 @@
+name: "&5地牢魂灯 II"
+description:
+  - "&9护甲值 +2"
+  - "&c生命恢复效果 +9%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: dungeon_lantern_1
+item: soul_lantern
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:dungeon_lantern_1
+  - soul_lantern
+  - talismans:dungeon_lantern_1
+
+  - soul_lantern
+  - ecoitems:talisman_core_1 ? ender_eye
+  - soul_lantern
+
+  - talismans:dungeon_lantern_1
+  - soul_lantern
+  - talismans:dungeon_lantern_1
+effects:
+  - id: armor
+    args:
+      points: 2
+  - id: regen_multiplier
+    args:
+      multiplier: 1.09
+conditions: []

@@ -1,0 +1,29 @@
+name: "&5学者徽章 IV"
+description:
+  - "&a原版经验获取 +20%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: scholar_badge_3
+item: echo_shard
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:scholar_badge_3
+  - echo_shard
+  - talismans:scholar_badge_3
+
+  - echo_shard
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - echo_shard
+
+  - talismans:scholar_badge_3
+  - echo_shard
+  - talismans:scholar_badge_3
+effects:
+  - id: xp_multiplier
+    args:
+      multiplier: 1.20
+conditions: []

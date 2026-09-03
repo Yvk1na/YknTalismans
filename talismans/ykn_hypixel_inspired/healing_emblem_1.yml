@@ -1,0 +1,32 @@
+name: "&8治愈圣徽 I"
+description:
+  - "&c生命恢复效果 +5%"
+  - "&c最大生命 +1"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&8普通护符"
+item: lily_pad
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - lily_pad
+  - lily_pad
+  - lily_pad
+
+  - lily_pad
+  - ecoitems:talisman_core_1 ? ender_eye
+  - lily_pad
+
+  - lily_pad
+  - lily_pad
+  - lily_pad
+effects:
+  - id: regen_multiplier
+    args:
+      multiplier: 1.05
+  - id: bonus_health
+    args:
+      health: 1
+conditions: []

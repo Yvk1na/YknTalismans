@@ -1,0 +1,29 @@
+name: "&5坚钢铭牌 III"
+description:
+  - "&9护甲韧性 +3"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: adamant_plate_2
+item: netherite_scrap
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:adamant_plate_2
+  - netherite_scrap
+  - talismans:adamant_plate_2
+
+  - netherite_scrap
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - netherite_scrap
+
+  - talismans:adamant_plate_2
+  - netherite_scrap
+  - talismans:adamant_plate_2
+effects:
+  - id: armor_toughness
+    args:
+      points: 3
+conditions: []

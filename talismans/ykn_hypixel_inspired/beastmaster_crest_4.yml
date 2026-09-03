@@ -1,0 +1,39 @@
+name: "&6驯兽师冠徽 IV"
+description:
+  - "&c对首领伤害 +10%"
+  - "&c最大生命 +5"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: beastmaster_crest_3
+item: diamond_horse_armor
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:beastmaster_crest_3
+  - diamond_block
+  - talismans:beastmaster_crest_3
+
+  - diamond_block
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - diamond_block
+
+  - talismans:beastmaster_crest_3
+  - diamond_block
+  - talismans:beastmaster_crest_3
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: 1.10
+    filters:
+      is_boss: true
+    triggers:
+      - melee_attack
+      - bow_attack
+      - trident_attack
+  - id: bonus_health
+    args:
+      health: 5
+conditions: []

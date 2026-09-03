@@ -1,0 +1,33 @@
+name: "&6矿物秘符 IV"
+description:
+  - "&e挖掘速度 +12%"
+  - "&2原版幸运 +7"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: mineral_charm_3
+item: netherite_scrap
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:mineral_charm_3
+  - netherite_ingot
+  - talismans:mineral_charm_3
+
+  - netherite_ingot
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - netherite_ingot
+
+  - talismans:mineral_charm_3
+  - netherite_ingot
+  - talismans:mineral_charm_3
+effects:
+  - id: mining_speed_multiplier
+    args:
+      multiplier: 1.12
+  - id: add_luck
+    args:
+      amount: 7
+conditions: []

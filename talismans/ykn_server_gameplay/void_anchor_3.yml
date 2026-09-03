@@ -1,0 +1,33 @@
+name: "&6虚空之锚 III"
+description:
+  - "&f安全坠落距离 +40格"
+  - "&b护甲韧性 +4"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: void_anchor_2
+item: end_crystal
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:void_anchor_2
+  - end_crystal
+  - talismans:void_anchor_2
+
+  - end_crystal
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - end_crystal
+
+  - talismans:void_anchor_2
+  - end_crystal
+  - talismans:void_anchor_2
+effects:
+  - id: safe_fall_distance
+    args:
+      distance: 40
+  - id: armor_toughness
+    args:
+      points: 4
+conditions: []

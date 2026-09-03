@@ -1,0 +1,47 @@
+name: "&9炼金坩埚 II"
+description:
+  - "&7携带时获得属性加成："
+  - "&d+3 再生"
+  - "&b+5 智慧"
+  - "&a+4% 炼金技能经验"
+  - ""
+  - "&e需要炼金等级 25"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: alchemy_crucible_1
+item: fermented_spider_eye
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:alchemy_crucible_1
+  - glistering_melon_slice
+  - talismans:alchemy_crucible_1
+
+  - glistering_melon_slice
+  - ecoitems:talisman_core_1 ? ender_eye
+  - glistering_melon_slice
+
+  - talismans:alchemy_crucible_1
+  - glistering_melon_slice
+  - talismans:alchemy_crucible_1
+effects:
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: 3
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: 5
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.04
+      skills:
+        - alchemy
+conditions:
+  - id: has_skill_level
+    args:
+      skill: alchemy
+      level: 25

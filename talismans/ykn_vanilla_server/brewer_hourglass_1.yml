@@ -1,0 +1,28 @@
+name: "&8酿造沙漏 I"
+description:
+  - "&d酿造速度 +5%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&8普通护符"
+item: glass_bottle
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - glass_bottle
+  - nether_wart
+  - glass_bottle
+
+  - nether_wart
+  - ecoitems:talisman_core_1 ? ender_eye
+  - nether_wart
+
+  - glass_bottle
+  - nether_wart
+  - glass_bottle
+effects:
+  - id: brew_time_multiplier
+    args:
+      multiplier: 0.95
+conditions: []

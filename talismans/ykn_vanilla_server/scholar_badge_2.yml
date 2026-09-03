@@ -1,0 +1,29 @@
+name: "&a学者徽章 II"
+description:
+  - "&a原版经验获取 +7%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&a少见的护符"
+higherLevelOf: scholar_badge_1
+item: experience_bottle
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:scholar_badge_1
+  - experience_bottle
+  - talismans:scholar_badge_1
+
+  - experience_bottle
+  - ecoitems:talisman_core_1 ? ender_eye
+  - experience_bottle
+
+  - talismans:scholar_badge_1
+  - experience_bottle
+  - talismans:scholar_badge_1
+effects:
+  - id: xp_multiplier
+    args:
+      multiplier: 1.07
+conditions: []

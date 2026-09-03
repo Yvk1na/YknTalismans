@@ -1,0 +1,29 @@
+name: "&6生命结晶 IV"
+description:
+  - "&c最大生命 +8"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: life_crystal_3
+item: totem_of_undying
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:life_crystal_3
+  - enchanted_golden_apple
+  - talismans:life_crystal_3
+
+  - enchanted_golden_apple
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - enchanted_golden_apple
+
+  - talismans:life_crystal_3
+  - enchanted_golden_apple
+  - talismans:life_crystal_3
+effects:
+  - id: bonus_health
+    args:
+      health: 8
+conditions: []

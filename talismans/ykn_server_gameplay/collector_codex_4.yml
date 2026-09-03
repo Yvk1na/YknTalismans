@@ -1,0 +1,39 @@
+name: "&6收藏家图鉴 IV"
+description:
+  - "&6物品掉落数量 +12%"
+  - "&a物品吸取范围 11格"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: collector_codex_3
+item: ender_chest
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:collector_codex_3
+  - ender_chest
+  - talismans:collector_codex_3
+
+  - ender_chest
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - ender_chest
+
+  - talismans:collector_codex_3
+  - ender_chest
+  - talismans:collector_codex_3
+effects:
+  - id: multiply_drops
+    args:
+      multiplier: 1.12
+    triggers:
+      - block_item_drop
+      - entity_item_drop
+      - catch_fish
+      - shear
+  - id: item_magnet
+    args:
+      radius: 11
+      pull_strength: 0.60
+conditions: []

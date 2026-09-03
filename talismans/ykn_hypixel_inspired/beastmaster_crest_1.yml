@@ -1,0 +1,38 @@
+name: "&a驯兽师冠徽 I"
+description:
+  - "&c对首领伤害 +2%"
+  - "&c最大生命 +1"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&a少见的护符"
+item: leather_horse_armor
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - bone
+  - leather
+  - bone
+
+  - leather
+  - ecoitems:talisman_core_1 ? ender_eye
+  - leather
+
+  - bone
+  - leather
+  - bone
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: 1.02
+    filters:
+      is_boss: true
+    triggers:
+      - melee_attack
+      - bow_attack
+      - trident_attack
+  - id: bonus_health
+    args:
+      health: 1
+conditions: []

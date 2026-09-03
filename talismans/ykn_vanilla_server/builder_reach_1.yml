@@ -1,0 +1,28 @@
+name: "&a筑造者量尺 I"
+description:
+  - "&e方块交互距离 +0.5 格"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&a少见的护符"
+item: stick
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - stick
+  - copper_ingot
+  - stick
+
+  - copper_ingot
+  - ecoitems:talisman_core_1 ? ender_eye
+  - copper_ingot
+
+  - stick
+  - copper_ingot
+  - stick
+effects:
+  - id: block_reach
+    args:
+      reach: 0.5
+conditions: []

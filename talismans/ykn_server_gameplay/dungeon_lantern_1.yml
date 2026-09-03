@@ -1,0 +1,32 @@
+name: "&9地牢魂灯 I"
+description:
+  - "&9护甲值 +1"
+  - "&c生命恢复效果 +4%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+item: torch
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - torch
+  - coal_block
+  - torch
+
+  - coal_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - coal_block
+
+  - torch
+  - coal_block
+  - torch
+effects:
+  - id: armor
+    args:
+      points: 1
+  - id: regen_multiplier
+    args:
+      multiplier: 1.04
+conditions: []

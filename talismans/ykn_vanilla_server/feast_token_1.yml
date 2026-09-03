@@ -1,0 +1,26 @@
+name: "&8盛宴餐券"
+description:
+  - "&6食物恢复量 +5%"
+  - ""
+  - "&8普通护符"
+item: bread
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - wheat
+  - cooked_beef
+  - wheat
+
+  - cooked_beef
+  - ecoitems:talisman_core_1 ? ender_eye
+  - cooked_beef
+
+  - wheat
+  - cooked_beef
+  - wheat
+effects:
+  - id: food_multiplier
+    args:
+      multiplier: 1.05
+conditions: []

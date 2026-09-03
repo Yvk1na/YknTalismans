@@ -1,0 +1,29 @@
+name: "&5垂钓者线轮 III"
+description:
+  - "&b收杆速度 +50%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: angler_reel_2
+item: trident
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:angler_reel_2
+  - heart_of_the_sea
+  - talismans:angler_reel_2
+
+  - heart_of_the_sea
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - heart_of_the_sea
+
+  - talismans:angler_reel_2
+  - heart_of_the_sea
+  - talismans:angler_reel_2
+effects:
+  - id: reel_speed_multiplier
+    args:
+      multiplier: 1.50
+conditions: []

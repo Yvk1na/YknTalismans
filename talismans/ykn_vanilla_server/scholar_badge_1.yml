@@ -1,0 +1,28 @@
+name: "&8学者徽章 I"
+description:
+  - "&a原版经验获取 +3%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&8普通护符"
+item: book
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - paper
+  - lapis_lazuli
+  - paper
+
+  - lapis_lazuli
+  - ecoitems:talisman_core_1 ? ender_eye
+  - lapis_lazuli
+
+  - paper
+  - lapis_lazuli
+  - paper
+effects:
+  - id: xp_multiplier
+    args:
+      multiplier: 1.03
+conditions: []

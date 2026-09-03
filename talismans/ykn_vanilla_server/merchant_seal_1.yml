@@ -1,0 +1,28 @@
+name: "&9商会印章 I"
+description:
+  - "&6商店出售价格 +2%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+item: emerald
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - gold_nugget
+  - emerald
+  - gold_nugget
+
+  - emerald
+  - ecoitems:talisman_core_1 ? ender_eye
+  - emerald
+
+  - gold_nugget
+  - emerald
+  - gold_nugget
+effects:
+  - id: sell_multiplier
+    args:
+      multiplier: 1.02
+conditions: []

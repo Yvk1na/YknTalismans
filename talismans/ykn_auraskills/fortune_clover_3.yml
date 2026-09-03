@@ -1,0 +1,45 @@
+name: "&6丰饶四叶草 III"
+description:
+  - "&7携带时获得属性加成："
+  - "&2+40 幸运"
+  - "&a+15% 采集技能经验"
+  - ""
+  - "&e需要农耕等级 80"
+  - ""
+  - "&6传说护符"
+higherLevelOf: fortune_clover_2
+item: nether_star
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:fortune_clover_2
+  - ancient_debris
+  - talismans:fortune_clover_2
+
+  - ancient_debris
+  - ecoitems:talisman_core_3 ? nether_star
+  - ancient_debris
+
+  - talismans:fortune_clover_2
+  - ancient_debris
+  - talismans:fortune_clover_2
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 40
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.15
+      skills:
+        - farming
+        - foraging
+        - mining
+        - fishing
+        - excavation
+conditions:
+  - id: has_skill_level
+    args:
+      skill: farming
+      level: 80

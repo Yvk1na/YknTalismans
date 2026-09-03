@@ -1,0 +1,26 @@
+name: "&8跃动弹簧"
+description:
+  - "&a跳跃力量 +5%"
+  - ""
+  - "&8普通护符"
+item: slime_ball
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - slime_ball
+  - sugar
+  - slime_ball
+
+  - sugar
+  - ecoitems:talisman_core_1 ? ender_eye
+  - sugar
+
+  - slime_ball
+  - sugar
+  - slime_ball
+effects:
+  - id: jump_strength_multiplier
+    args:
+      multiplier: 1.05
+conditions: []

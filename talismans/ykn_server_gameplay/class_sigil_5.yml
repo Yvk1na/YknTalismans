@@ -1,0 +1,35 @@
+name: "&d职业秘印 V"
+description:
+  - "&c力量 +22"
+  - "&9韧性 +16"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&d神话护符"
+higherLevelOf: class_sigil_4
+item: dragon_head
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:class_sigil_4
+  - nether_star
+  - talismans:class_sigil_4
+
+  - nether_star
+  - ecoitems:talisman_core_3 ? nether_star
+  - nether_star
+
+  - talismans:class_sigil_4
+  - nether_star
+  - talismans:class_sigil_4
+effects:
+  - id: add_stat
+    args:
+      stat: strength
+      amount: 22
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: 16
+conditions: []

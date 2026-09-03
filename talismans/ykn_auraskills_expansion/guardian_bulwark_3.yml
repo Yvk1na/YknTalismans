@@ -1,0 +1,47 @@
+name: "&5守望壁垒 III"
+description:
+  - "&7携带时获得属性加成："
+  - "&9+12 韧性"
+  - "&c+18 生命"
+  - "&a+7% 防御技能经验"
+  - ""
+  - "&e需要防御等级 45"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: guardian_bulwark_2
+item: diamond_chestplate
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:guardian_bulwark_2
+  - diamond
+  - talismans:guardian_bulwark_2
+
+  - diamond
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - diamond
+
+  - talismans:guardian_bulwark_2
+  - diamond
+  - talismans:guardian_bulwark_2
+effects:
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: 12
+  - id: add_stat
+    args:
+      stat: health
+      amount: 18
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.07
+      skills:
+        - defense
+conditions:
+  - id: has_skill_level
+    args:
+      skill: defense
+      level: 45

@@ -1,0 +1,39 @@
+name: "&5收藏家图鉴 III"
+description:
+  - "&6物品掉落数量 +7%"
+  - "&a物品吸取范围 7格"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: collector_codex_2
+item: shulker_box
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:collector_codex_2
+  - shulker_shell
+  - talismans:collector_codex_2
+
+  - shulker_shell
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - shulker_shell
+
+  - talismans:collector_codex_2
+  - shulker_shell
+  - talismans:collector_codex_2
+effects:
+  - id: multiply_drops
+    args:
+      multiplier: 1.07
+    triggers:
+      - block_item_drop
+      - entity_item_drop
+      - catch_fish
+      - shear
+  - id: item_magnet
+    args:
+      radius: 7
+      pull_strength: 0.40
+conditions: []

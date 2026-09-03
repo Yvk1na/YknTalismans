@@ -1,0 +1,42 @@
+name: "&5逐风徽章 III"
+description:
+  - "&7携带时获得属性加成："
+  - "&f+12 速度"
+  - "&a+7% 敏捷技能经验"
+  - ""
+  - "&e需要敏捷等级 45"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: agility_badge_2
+item: wind_charge
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:agility_badge_2
+  - wind_charge
+  - talismans:agility_badge_2
+
+  - wind_charge
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - wind_charge
+
+  - talismans:agility_badge_2
+  - wind_charge
+  - talismans:agility_badge_2
+effects:
+  - id: add_stat
+    args:
+      stat: speed
+      amount: 12
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.07
+      skills:
+        - agility
+conditions:
+  - id: has_skill_level
+    args:
+      skill: agility
+      level: 45

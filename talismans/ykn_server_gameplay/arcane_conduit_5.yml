@@ -1,0 +1,35 @@
+name: "&d奥术导器 V"
+description:
+  - "&b智慧 +22"
+  - "&a再生 +11"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&d神话护符"
+higherLevelOf: arcane_conduit_4
+item: dragon_egg
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:arcane_conduit_4
+  - nether_star
+  - talismans:arcane_conduit_4
+
+  - nether_star
+  - ecoitems:talisman_core_3 ? nether_star
+  - nether_star
+
+  - talismans:arcane_conduit_4
+  - nether_star
+  - talismans:arcane_conduit_4
+effects:
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: 22
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: 11
+conditions: []

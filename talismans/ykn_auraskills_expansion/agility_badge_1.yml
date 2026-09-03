@@ -1,0 +1,41 @@
+name: "&a逐风徽章 I"
+description:
+  - "&7携带时获得属性加成："
+  - "&f+3 速度"
+  - "&a+2% 敏捷技能经验"
+  - ""
+  - "&e需要敏捷等级 10"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&a少见的护符"
+item: feather
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - feather
+  - sugar
+  - feather
+
+  - sugar
+  - ecoitems:talisman_core_1 ? ender_eye
+  - sugar
+
+  - feather
+  - sugar
+  - feather
+effects:
+  - id: add_stat
+    args:
+      stat: speed
+      amount: 3
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.02
+      skills:
+        - agility
+conditions:
+  - id: has_skill_level
+    args:
+      skill: agility
+      level: 10

@@ -1,0 +1,39 @@
+name: "&a百业勋章 I"
+description:
+  - "&a生产技能经验 +2%"
+  - "&a幸运 +2"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&a少见的护符"
+item: leather_chestplate
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - leather
+  - iron_ingot
+  - leather
+
+  - iron_ingot
+  - ecoitems:talisman_core_1 ? ender_eye
+  - iron_ingot
+
+  - leather
+  - iron_ingot
+  - leather
+effects:
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.02
+      skills:
+        - farming
+        - foraging
+        - mining
+        - fishing
+        - excavation
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 2
+conditions: []

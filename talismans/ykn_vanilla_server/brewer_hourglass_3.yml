@@ -1,0 +1,29 @@
+name: "&9酿造沙漏 III"
+description:
+  - "&d酿造速度 +30%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: brewer_hourglass_2
+item: brewing_stand
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:brewer_hourglass_2
+  - ghast_tear
+  - talismans:brewer_hourglass_2
+
+  - ghast_tear
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - ghast_tear
+
+  - talismans:brewer_hourglass_2
+  - ghast_tear
+  - talismans:brewer_hourglass_2
+effects:
+  - id: brew_time_multiplier
+    args:
+      multiplier: 0.70
+conditions: []

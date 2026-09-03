@@ -1,0 +1,33 @@
+name: "&9空岛之心 II"
+description:
+  - "&c最大生命 +3"
+  - "&9护甲值 +2"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: island_heart_1
+item: golden_apple
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:island_heart_1
+  - gold_block
+  - talismans:island_heart_1
+
+  - gold_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - gold_block
+
+  - talismans:island_heart_1
+  - gold_block
+  - talismans:island_heart_1
+effects:
+  - id: bonus_health
+    args:
+      health: 3
+  - id: armor
+    args:
+      points: 2
+conditions: []

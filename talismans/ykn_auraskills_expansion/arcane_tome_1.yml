@@ -1,0 +1,41 @@
+name: "&a奥术典籍 I"
+description:
+  - "&7携带时获得属性加成："
+  - "&b+3 智慧"
+  - "&a+2% 附魔技能经验"
+  - ""
+  - "&e需要附魔等级 10"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&a少见的护符"
+item: book
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - paper
+  - lapis_lazuli
+  - paper
+
+  - lapis_lazuli
+  - ecoitems:talisman_core_1 ? ender_eye
+  - lapis_lazuli
+
+  - paper
+  - lapis_lazuli
+  - paper
+effects:
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: 3
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.02
+      skills:
+        - enchanting
+conditions:
+  - id: has_skill_level
+    args:
+      skill: enchanting
+      level: 10

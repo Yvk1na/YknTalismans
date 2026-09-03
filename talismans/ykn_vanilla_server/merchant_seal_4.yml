@@ -1,0 +1,29 @@
+name: "&d商会印章 IV"
+description:
+  - "&6商店出售价格 +14%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&d神话护符"
+higherLevelOf: merchant_seal_3
+item: nether_star
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:merchant_seal_3
+  - nether_star
+  - talismans:merchant_seal_3
+
+  - nether_star
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - nether_star
+
+  - talismans:merchant_seal_3
+  - nether_star
+  - talismans:merchant_seal_3
+effects:
+  - id: sell_multiplier
+    args:
+      multiplier: 1.14
+conditions: []

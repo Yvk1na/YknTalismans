@@ -1,0 +1,29 @@
+name: "&9矿工脉冲器 III"
+description:
+  - "&e挖掘速度 +12%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: miner_pulse_2
+item: diamond_pickaxe
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:miner_pulse_2
+  - diamond
+  - talismans:miner_pulse_2
+
+  - diamond
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - diamond
+
+  - talismans:miner_pulse_2
+  - diamond
+  - talismans:miner_pulse_2
+effects:
+  - id: mining_speed_multiplier
+    args:
+      multiplier: 1.12
+conditions: []

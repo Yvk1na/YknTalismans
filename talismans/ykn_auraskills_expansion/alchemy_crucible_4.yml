@@ -1,0 +1,47 @@
+name: "&6炼金坩埚 IV"
+description:
+  - "&7携带时获得属性加成："
+  - "&d+8 再生"
+  - "&b+15 智慧"
+  - "&a+10% 炼金技能经验"
+  - ""
+  - "&e需要炼金等级 70"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: alchemy_crucible_3
+item: ghast_tear
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:alchemy_crucible_3
+  - ghast_tear
+  - talismans:alchemy_crucible_3
+
+  - ghast_tear
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - ghast_tear
+
+  - talismans:alchemy_crucible_3
+  - ghast_tear
+  - talismans:alchemy_crucible_3
+effects:
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: 8
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: 15
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.10
+      skills:
+        - alchemy
+conditions:
+  - id: has_skill_level
+    args:
+      skill: alchemy
+      level: 70

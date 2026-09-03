@@ -1,0 +1,34 @@
+name: "&d赏金行囊 V"
+description:
+  - "&6物品掉落数量 +25%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&d神话护符"
+higherLevelOf: bounty_satchel_4
+item: dragon_egg
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:bounty_satchel_4
+  - nether_star
+  - talismans:bounty_satchel_4
+
+  - nether_star
+  - ecoitems:talisman_core_3 ? nether_star
+  - nether_star
+
+  - talismans:bounty_satchel_4
+  - nether_star
+  - talismans:bounty_satchel_4
+effects:
+  - id: multiply_drops
+    args:
+      multiplier: 1.25
+    triggers:
+      - block_item_drop
+      - entity_item_drop
+      - catch_fish
+      - shear
+conditions: []

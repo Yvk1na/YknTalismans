@@ -1,0 +1,33 @@
+name: "&6战争契约 IV"
+description:
+  - "&c造成伤害 +10%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: war_contract_3
+item: netherite_sword
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:war_contract_3
+  - heavy_core
+  - talismans:war_contract_3
+
+  - heavy_core
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - heavy_core
+
+  - talismans:war_contract_3
+  - heavy_core
+  - talismans:war_contract_3
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: 1.10
+    triggers:
+      - melee_attack
+      - bow_attack
+      - trident_attack
+conditions: []

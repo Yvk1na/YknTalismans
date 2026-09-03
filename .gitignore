@@ -1,0 +1,21 @@
+# Gradle and IDE state
+.gradle/
+build/
+.idea/
+*.iml
+out/
+
+# Local agent state
+.agents/
+.codex/
+
+# Built releases and local binary dependencies
+release/
+*.jar
+
+# Runtime and OS files
+logs/
+hs_err_pid*
+replay_pid*
+Thumbs.db
+.DS_Store

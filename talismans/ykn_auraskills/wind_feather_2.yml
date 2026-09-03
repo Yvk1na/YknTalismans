@@ -1,0 +1,35 @@
+name: "&9疾风之羽 II"
+description:
+  - "&7携带时获得属性加成："
+  - "&f+25 速度"
+  - ""
+  - "&e需要敏捷等级 50"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: wind_feather_1
+item: breeze_rod
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:wind_feather_1
+  - rabbit_foot
+  - talismans:wind_feather_1
+
+  - breeze_rod
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - breeze_rod
+
+  - talismans:wind_feather_1
+  - rabbit_foot
+  - talismans:wind_feather_1
+effects:
+  - id: add_stat
+    args:
+      stat: speed
+      amount: 25
+conditions:
+  - id: has_skill_level
+    args:
+      skill: agility
+      level: 50

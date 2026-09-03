@@ -1,0 +1,42 @@
+name: "&6森灵图腾 IV"
+description:
+  - "&7携带时获得属性加成："
+  - "&d+8 再生"
+  - "&a+10% 伐木技能经验"
+  - ""
+  - "&e需要伐木等级 70"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: forest_totem_3
+item: diamond_axe
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:forest_totem_3
+  - cherry_log
+  - talismans:forest_totem_3
+
+  - cherry_log
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - cherry_log
+
+  - talismans:forest_totem_3
+  - cherry_log
+  - talismans:forest_totem_3
+effects:
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: 8
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.10
+      skills:
+        - foraging
+conditions:
+  - id: has_skill_level
+    args:
+      skill: foraging
+      level: 70

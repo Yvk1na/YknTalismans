@@ -1,0 +1,33 @@
+name: "&6重铸战锤 III"
+description:
+  - "&b护甲韧性 +4"
+  - "&e攻击速度 +8%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: reforge_hammer_2
+item: netherite_pickaxe
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:reforge_hammer_2
+  - netherite_ingot
+  - talismans:reforge_hammer_2
+
+  - netherite_ingot
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - netherite_ingot
+
+  - talismans:reforge_hammer_2
+  - netherite_ingot
+  - talismans:reforge_hammer_2
+effects:
+  - id: armor_toughness
+    args:
+      points: 4
+  - id: attack_speed_multiplier
+    args:
+      multiplier: 1.08
+conditions: []

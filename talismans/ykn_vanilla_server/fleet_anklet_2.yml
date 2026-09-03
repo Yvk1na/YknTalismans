@@ -1,0 +1,29 @@
+name: "&a迅捷脚环 II"
+description:
+  - "&f移动速度 +5%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&a少见的护符"
+higherLevelOf: fleet_anklet_1
+item: golden_boots
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:fleet_anklet_1
+  - rabbit_foot
+  - talismans:fleet_anklet_1
+
+  - rabbit_foot
+  - ecoitems:talisman_core_1 ? ender_eye
+  - rabbit_foot
+
+  - talismans:fleet_anklet_1
+  - rabbit_foot
+  - talismans:fleet_anklet_1
+effects:
+  - id: movement_speed_multiplier
+    args:
+      multiplier: 1.05
+conditions: []

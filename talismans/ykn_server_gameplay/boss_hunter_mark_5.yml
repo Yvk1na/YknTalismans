@@ -1,0 +1,39 @@
+name: "&d首领猎印 V"
+description:
+  - "&c对首领伤害 +21%"
+  - "&e攻击速度 +10%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&d神话护符"
+higherLevelOf: boss_hunter_mark_4
+item: dragon_egg
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:boss_hunter_mark_4
+  - nether_star
+  - talismans:boss_hunter_mark_4
+
+  - nether_star
+  - ecoitems:talisman_core_3 ? nether_star
+  - nether_star
+
+  - talismans:boss_hunter_mark_4
+  - nether_star
+  - talismans:boss_hunter_mark_4
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: 1.21
+    filters:
+      is_boss: true
+    triggers:
+      - melee_attack
+      - bow_attack
+      - trident_attack
+  - id: attack_speed_multiplier
+    args:
+      multiplier: 1.10
+conditions: []

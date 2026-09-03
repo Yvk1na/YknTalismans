@@ -1,0 +1,33 @@
+name: "&9迷宫星盘 II"
+description:
+  - "&f移动速度 +5%"
+  - "&a原版幸运 +2"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: maze_compass_1
+item: recovery_compass
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:maze_compass_1
+  - ender_eye
+  - talismans:maze_compass_1
+
+  - ender_eye
+  - ecoitems:talisman_core_1 ? ender_eye
+  - ender_eye
+
+  - talismans:maze_compass_1
+  - ender_eye
+  - talismans:maze_compass_1
+effects:
+  - id: movement_speed_multiplier
+    args:
+      multiplier: 1.05
+  - id: add_luck
+    args:
+      amount: 2
+conditions: []

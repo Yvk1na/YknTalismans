@@ -1,0 +1,45 @@
+name: "&5丰饶四叶草 II"
+description:
+  - "&7携带时获得属性加成："
+  - "&2+20 幸运"
+  - "&a+8% 采集技能经验"
+  - ""
+  - "&e需要农耕等级 50"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: fortune_clover_1
+item: emerald
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:fortune_clover_1
+  - emerald_block
+  - talismans:fortune_clover_1
+
+  - diamond_block
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - diamond_block
+
+  - talismans:fortune_clover_1
+  - emerald_block
+  - talismans:fortune_clover_1
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 20
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.08
+      skills:
+        - farming
+        - foraging
+        - mining
+        - fishing
+        - excavation
+conditions:
+  - id: has_skill_level
+    args:
+      skill: farming
+      level: 50

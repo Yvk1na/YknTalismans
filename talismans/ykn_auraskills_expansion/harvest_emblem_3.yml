@@ -1,0 +1,42 @@
+name: "&5丰收徽记 III"
+description:
+  - "&7携带时获得属性加成："
+  - "&2+7 幸运"
+  - "&a+7% 农耕技能经验"
+  - ""
+  - "&e需要农耕等级 45"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: harvest_emblem_2
+item: golden_carrot
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:harvest_emblem_2
+  - golden_carrot
+  - talismans:harvest_emblem_2
+
+  - golden_carrot
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - golden_carrot
+
+  - talismans:harvest_emblem_2
+  - golden_carrot
+  - talismans:harvest_emblem_2
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 7
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.07
+      skills:
+        - farming
+conditions:
+  - id: has_skill_level
+    args:
+      skill: farming
+      level: 45

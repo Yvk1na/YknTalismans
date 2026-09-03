@@ -1,0 +1,33 @@
+name: "&5战争契约 III"
+description:
+  - "&c造成伤害 +6%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: war_contract_2
+item: diamond_sword
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:war_contract_2
+  - diamond
+  - talismans:war_contract_2
+
+  - diamond
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - diamond
+
+  - talismans:war_contract_2
+  - diamond
+  - talismans:war_contract_2
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: 1.06
+    triggers:
+      - melee_attack
+      - bow_attack
+      - trident_attack
+conditions: []

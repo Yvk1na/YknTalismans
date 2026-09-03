@@ -1,0 +1,33 @@
+name: "&9矿物秘符 II"
+description:
+  - "&e挖掘速度 +4%"
+  - "&2原版幸运 +2"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: mineral_charm_1
+item: raw_gold
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:mineral_charm_1
+  - gold_block
+  - talismans:mineral_charm_1
+
+  - gold_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - gold_block
+
+  - talismans:mineral_charm_1
+  - gold_block
+  - talismans:mineral_charm_1
+effects:
+  - id: mining_speed_multiplier
+    args:
+      multiplier: 1.04
+  - id: add_luck
+    args:
+      amount: 2
+conditions: []

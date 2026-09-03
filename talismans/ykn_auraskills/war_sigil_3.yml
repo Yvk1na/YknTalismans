@@ -1,0 +1,40 @@
+name: "&6战魂纹章 III"
+description:
+  - "&7携带时获得属性加成："
+  - "&c+40 力量"
+  - "&4+25% 暴击伤害"
+  - ""
+  - "&e需要战斗等级 80"
+  - ""
+  - "&6传说护符"
+higherLevelOf: war_sigil_2
+item: netherite_sword
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:war_sigil_2
+  - netherite_ingot
+  - talismans:war_sigil_2
+
+  - netherite_ingot
+  - ecoitems:talisman_core_3 ? nether_star
+  - netherite_ingot
+
+  - talismans:war_sigil_2
+  - netherite_ingot
+  - talismans:war_sigil_2
+effects:
+  - id: add_stat
+    args:
+      stat: strength
+      amount: 40
+  - id: add_stat
+    args:
+      stat: crit_damage
+      amount: 25
+conditions:
+  - id: has_skill_level
+    args:
+      skill: fighting
+      level: 80

@@ -1,0 +1,35 @@
+name: "&6泰坦守印 III"
+description:
+  - "&7携带时获得属性加成："
+  - "&9+50 韧性"
+  - ""
+  - "&e需要防御等级 80"
+  - ""
+  - "&6传说护符"
+higherLevelOf: titan_seal_2
+item: netherite_chestplate
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:titan_seal_2
+  - netherite_block
+  - talismans:titan_seal_2
+
+  - netherite_block
+  - ecoitems:talisman_core_3 ? nether_star
+  - netherite_block
+
+  - talismans:titan_seal_2
+  - netherite_block
+  - talismans:titan_seal_2
+effects:
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: 50
+conditions:
+  - id: has_skill_level
+    args:
+      skill: defense
+      level: 80

@@ -1,0 +1,40 @@
+name: "&5生命灵结 II"
+description:
+  - "&7携带时获得属性加成："
+  - "&c+25 生命"
+  - "&d+12 再生"
+  - ""
+  - "&e需要炼金等级 50"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: life_knot_1
+item: enchanted_golden_apple
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:life_knot_1
+  - enchanted_golden_apple
+  - talismans:life_knot_1
+
+  - ghast_tear
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - ghast_tear
+
+  - talismans:life_knot_1
+  - enchanted_golden_apple
+  - talismans:life_knot_1
+effects:
+  - id: add_stat
+    args:
+      stat: health
+      amount: 25
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: 12
+conditions:
+  - id: has_skill_level
+    args:
+      skill: alchemy
+      level: 50

@@ -1,0 +1,29 @@
+name: "&5生命结晶 III"
+description:
+  - "&c最大生命 +4"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: life_crystal_2
+item: enchanted_golden_apple
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:life_crystal_2
+  - ghast_tear
+  - talismans:life_crystal_2
+
+  - ghast_tear
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - ghast_tear
+
+  - talismans:life_crystal_2
+  - ghast_tear
+  - talismans:life_crystal_2
+effects:
+  - id: bonus_health
+    args:
+      health: 4
+conditions: []

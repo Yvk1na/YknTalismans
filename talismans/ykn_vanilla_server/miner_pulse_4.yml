@@ -1,0 +1,29 @@
+name: "&5矿工脉冲器 IV"
+description:
+  - "&e挖掘速度 +18%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: miner_pulse_3
+item: netherite_pickaxe
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:miner_pulse_3
+  - ancient_debris
+  - talismans:miner_pulse_3
+
+  - ancient_debris
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - ancient_debris
+
+  - talismans:miner_pulse_3
+  - ancient_debris
+  - talismans:miner_pulse_3
+effects:
+  - id: mining_speed_multiplier
+    args:
+      multiplier: 1.18
+conditions: []

@@ -1,0 +1,29 @@
+name: "&9行商凭证 II"
+description:
+  - "&a村民交易消耗 -6%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: trader_writ_1
+item: bell
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:trader_writ_1
+  - bell
+  - talismans:trader_writ_1
+
+  - bell
+  - ecoitems:talisman_core_1 ? ender_eye
+  - bell
+
+  - talismans:trader_writ_1
+  - bell
+  - talismans:trader_writ_1
+effects:
+  - id: villager_trade_multiplier
+    args:
+      multiplier: 0.94
+conditions: []

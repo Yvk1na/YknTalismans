@@ -1,0 +1,29 @@
+name: "&5商会印章 II"
+description:
+  - "&6商店出售价格 +5%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: merchant_seal_1
+item: emerald_block
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:merchant_seal_1
+  - gold_block
+  - talismans:merchant_seal_1
+
+  - gold_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - gold_block
+
+  - talismans:merchant_seal_1
+  - gold_block
+  - talismans:merchant_seal_1
+effects:
+  - id: sell_multiplier
+    args:
+      multiplier: 1.05
+conditions: []

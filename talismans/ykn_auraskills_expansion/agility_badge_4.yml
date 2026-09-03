@@ -1,0 +1,42 @@
+name: "&6逐风徽章 IV"
+description:
+  - "&7携带时获得属性加成："
+  - "&f+20 速度"
+  - "&a+10% 敏捷技能经验"
+  - ""
+  - "&e需要敏捷等级 70"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: agility_badge_3
+item: breeze_rod
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:agility_badge_3
+  - breeze_rod
+  - talismans:agility_badge_3
+
+  - breeze_rod
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - breeze_rod
+
+  - talismans:agility_badge_3
+  - breeze_rod
+  - talismans:agility_badge_3
+effects:
+  - id: add_stat
+    args:
+      stat: speed
+      amount: 20
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.10
+      skills:
+        - agility
+conditions:
+  - id: has_skill_level
+    args:
+      skill: agility
+      level: 70

@@ -1,0 +1,35 @@
+name: "&6奥术导器 IV"
+description:
+  - "&b智慧 +14"
+  - "&a再生 +7"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: arcane_conduit_3
+item: beacon
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:arcane_conduit_3
+  - beacon
+  - talismans:arcane_conduit_3
+
+  - beacon
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - beacon
+
+  - talismans:arcane_conduit_3
+  - beacon
+  - talismans:arcane_conduit_3
+effects:
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: 14
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: 7
+conditions: []

@@ -1,0 +1,26 @@
+name: "&8轻落符文"
+description:
+  - "&f安全坠落距离 +1 格"
+  - ""
+  - "&8普通护符"
+item: feather
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - white_wool
+  - feather
+  - white_wool
+
+  - feather
+  - ecoitems:talisman_core_1 ? ender_eye
+  - feather
+
+  - white_wool
+  - feather
+  - white_wool
+effects:
+  - id: safe_fall_distance
+    args:
+      distance: 1
+conditions: []

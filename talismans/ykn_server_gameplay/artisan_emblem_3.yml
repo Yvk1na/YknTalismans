@@ -1,0 +1,33 @@
+name: "&5巧匠徽记 III"
+description:
+  - "&e方块交互距离 +0.90格"
+  - "&e挖掘速度 +9%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: artisan_emblem_2
+item: crafter
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:artisan_emblem_2
+  - netherite_scrap
+  - talismans:artisan_emblem_2
+
+  - netherite_scrap
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - netherite_scrap
+
+  - talismans:artisan_emblem_2
+  - netherite_scrap
+  - talismans:artisan_emblem_2
+effects:
+  - id: block_reach
+    args:
+      reach: 0.90
+  - id: mining_speed_multiplier
+    args:
+      multiplier: 1.09
+conditions: []

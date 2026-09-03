@@ -1,0 +1,35 @@
+name: "&5奥术导器 III"
+description:
+  - "&b智慧 +8"
+  - "&a再生 +4"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: arcane_conduit_2
+item: enchanting_table
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:arcane_conduit_2
+  - experience_bottle
+  - talismans:arcane_conduit_2
+
+  - experience_bottle
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - experience_bottle
+
+  - talismans:arcane_conduit_2
+  - experience_bottle
+  - talismans:arcane_conduit_2
+effects:
+  - id: add_stat
+    args:
+      stat: wisdom
+      amount: 8
+  - id: add_stat
+    args:
+      stat: regeneration
+      amount: 4
+conditions: []

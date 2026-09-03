@@ -1,0 +1,33 @@
+name: "&5空岛之心 III"
+description:
+  - "&c最大生命 +6"
+  - "&9护甲值 +3"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: island_heart_2
+item: beacon
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:island_heart_2
+  - diamond_block
+  - talismans:island_heart_2
+
+  - diamond_block
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - diamond_block
+
+  - talismans:island_heart_2
+  - diamond_block
+  - talismans:island_heart_2
+effects:
+  - id: bonus_health
+    args:
+      health: 6
+  - id: armor
+    args:
+      points: 3
+conditions: []

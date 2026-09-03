@@ -1,0 +1,29 @@
+name: "&5筑造者量尺 III"
+description:
+  - "&e方块交互距离 +1.5 格"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: builder_reach_2
+item: end_rod
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:builder_reach_2
+  - end_rod
+  - talismans:builder_reach_2
+
+  - end_rod
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - end_rod
+
+  - talismans:builder_reach_2
+  - end_rod
+  - talismans:builder_reach_2
+effects:
+  - id: block_reach
+    args:
+      reach: 1.5
+conditions: []

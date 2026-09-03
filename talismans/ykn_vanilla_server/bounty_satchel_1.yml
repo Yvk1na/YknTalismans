@@ -1,0 +1,33 @@
+name: "&a赏金行囊 I"
+description:
+  - "&6物品掉落数量 +2%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&a少见的护符"
+item: chest
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - leather
+  - gold_ingot
+  - leather
+
+  - gold_ingot
+  - ecoitems:talisman_core_1 ? ender_eye
+  - gold_ingot
+
+  - leather
+  - gold_ingot
+  - leather
+effects:
+  - id: multiply_drops
+    args:
+      multiplier: 1.02
+    triggers:
+      - block_item_drop
+      - entity_item_drop
+      - catch_fish
+      - shear
+conditions: []

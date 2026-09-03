@@ -1,0 +1,29 @@
+name: "&9筑造者量尺 II"
+description:
+  - "&e方块交互距离 +1 格"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: builder_reach_1
+item: bamboo
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:builder_reach_1
+  - bamboo
+  - talismans:builder_reach_1
+
+  - bamboo
+  - ecoitems:talisman_core_1 ? ender_eye
+  - bamboo
+
+  - talismans:builder_reach_1
+  - bamboo
+  - talismans:builder_reach_1
+effects:
+  - id: block_reach
+    args:
+      reach: 1.0
+conditions: []

@@ -1,0 +1,47 @@
+name: "&6守望壁垒 IV"
+description:
+  - "&7携带时获得属性加成："
+  - "&9+20 韧性"
+  - "&c+30 生命"
+  - "&a+10% 防御技能经验"
+  - ""
+  - "&e需要防御等级 70"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: guardian_bulwark_3
+item: totem_of_undying
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:guardian_bulwark_3
+  - diamond_block
+  - talismans:guardian_bulwark_3
+
+  - diamond_block
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - diamond_block
+
+  - talismans:guardian_bulwark_3
+  - diamond_block
+  - talismans:guardian_bulwark_3
+effects:
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: 20
+  - id: add_stat
+    args:
+      stat: health
+      amount: 30
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.10
+      skills:
+        - defense
+conditions:
+  - id: has_skill_level
+    args:
+      skill: defense
+      level: 70

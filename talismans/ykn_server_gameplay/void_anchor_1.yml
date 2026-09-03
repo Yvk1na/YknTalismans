@@ -1,0 +1,32 @@
+name: "&9虚空之锚 I"
+description:
+  - "&f安全坠落距离 +10格"
+  - "&b护甲韧性 +1"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+item: crying_obsidian
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - obsidian
+  - obsidian
+  - obsidian
+
+  - obsidian
+  - ecoitems:talisman_core_1 ? ender_eye
+  - obsidian
+
+  - obsidian
+  - obsidian
+  - obsidian
+effects:
+  - id: safe_fall_distance
+    args:
+      distance: 10
+  - id: armor_toughness
+    args:
+      points: 1
+conditions: []

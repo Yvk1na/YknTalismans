@@ -1,0 +1,33 @@
+name: "&6地牢魂灯 III"
+description:
+  - "&9护甲值 +4"
+  - "&c生命恢复效果 +16%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: dungeon_lantern_2
+item: sea_lantern
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:dungeon_lantern_2
+  - sea_lantern
+  - talismans:dungeon_lantern_2
+
+  - sea_lantern
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - sea_lantern
+
+  - talismans:dungeon_lantern_2
+  - sea_lantern
+  - talismans:dungeon_lantern_2
+effects:
+  - id: armor
+    args:
+      points: 4
+  - id: regen_multiplier
+    args:
+      multiplier: 1.16
+conditions: []

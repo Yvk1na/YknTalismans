@@ -1,0 +1,29 @@
+name: "&9迅捷脚环 III"
+description:
+  - "&f移动速度 +9%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: fleet_anklet_2
+item: diamond_boots
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:fleet_anklet_2
+  - phantom_membrane
+  - talismans:fleet_anklet_2
+
+  - phantom_membrane
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - phantom_membrane
+
+  - talismans:fleet_anklet_2
+  - phantom_membrane
+  - talismans:fleet_anklet_2
+effects:
+  - id: movement_speed_multiplier
+    args:
+      multiplier: 1.09
+conditions: []

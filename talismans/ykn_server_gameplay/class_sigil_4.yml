@@ -1,0 +1,35 @@
+name: "&6职业秘印 IV"
+description:
+  - "&c力量 +14"
+  - "&9韧性 +10"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: class_sigil_3
+item: black_banner
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:class_sigil_3
+  - netherite_ingot
+  - talismans:class_sigil_3
+
+  - netherite_ingot
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - netherite_ingot
+
+  - talismans:class_sigil_3
+  - netherite_ingot
+  - talismans:class_sigil_3
+effects:
+  - id: add_stat
+    args:
+      stat: strength
+      amount: 14
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: 10
+conditions: []

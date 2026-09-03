@@ -1,0 +1,35 @@
+name: "&5职业秘印 III"
+description:
+  - "&c力量 +8"
+  - "&9韧性 +6"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: class_sigil_2
+item: purple_banner
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:class_sigil_2
+  - diamond_block
+  - talismans:class_sigil_2
+
+  - diamond_block
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - diamond_block
+
+  - talismans:class_sigil_2
+  - diamond_block
+  - talismans:class_sigil_2
+effects:
+  - id: add_stat
+    args:
+      stat: strength
+      amount: 8
+  - id: add_stat
+    args:
+      stat: toughness
+      amount: 6
+conditions: []

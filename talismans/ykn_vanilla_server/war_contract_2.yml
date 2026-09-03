@@ -1,0 +1,33 @@
+name: "&9战争契约 II"
+description:
+  - "&c造成伤害 +3%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: war_contract_1
+item: iron_sword
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:war_contract_1
+  - blaze_rod
+  - talismans:war_contract_1
+
+  - blaze_rod
+  - ecoitems:talisman_core_1 ? ender_eye
+  - blaze_rod
+
+  - talismans:war_contract_1
+  - blaze_rod
+  - talismans:war_contract_1
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: 1.03
+    triggers:
+      - melee_attack
+      - bow_attack
+      - trident_attack
+conditions: []

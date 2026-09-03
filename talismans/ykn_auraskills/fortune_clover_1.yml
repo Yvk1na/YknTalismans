@@ -1,0 +1,44 @@
+name: "&9丰饶四叶草 I"
+description:
+  - "&7携带时获得属性加成："
+  - "&2+8 幸运"
+  - "&a+3% 采集技能经验"
+  - ""
+  - "&e需要农耕等级 20"
+  - ""
+  - "&9稀有护符"
+item: rabbit_foot
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - emerald
+  - rabbit_foot
+  - emerald
+
+  - gold_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - gold_block
+
+  - emerald
+  - rabbit_foot
+  - emerald
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 8
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.03
+      skills:
+        - farming
+        - foraging
+        - mining
+        - fishing
+        - excavation
+conditions:
+  - id: has_skill_level
+    args:
+      skill: farming
+      level: 20

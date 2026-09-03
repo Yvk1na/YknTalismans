@@ -1,0 +1,33 @@
+name: "&d重铸战锤 IV"
+description:
+  - "&b护甲韧性 +6"
+  - "&e攻击速度 +12%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&d神话护符"
+higherLevelOf: reforge_hammer_3
+item: mace
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:reforge_hammer_3
+  - heavy_core
+  - talismans:reforge_hammer_3
+
+  - heavy_core
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - heavy_core
+
+  - talismans:reforge_hammer_3
+  - heavy_core
+  - talismans:reforge_hammer_3
+effects:
+  - id: armor_toughness
+    args:
+      points: 6
+  - id: attack_speed_multiplier
+    args:
+      multiplier: 1.12
+conditions: []

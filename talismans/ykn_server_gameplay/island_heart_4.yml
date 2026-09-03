@@ -1,0 +1,33 @@
+name: "&6空岛之心 IV"
+description:
+  - "&c最大生命 +11"
+  - "&9护甲值 +5"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&6传说护符"
+higherLevelOf: island_heart_3
+item: respawn_anchor
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:island_heart_3
+  - netherite_ingot
+  - talismans:island_heart_3
+
+  - netherite_ingot
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - netherite_ingot
+
+  - talismans:island_heart_3
+  - netherite_ingot
+  - talismans:island_heart_3
+effects:
+  - id: bonus_health
+    args:
+      health: 11
+  - id: armor
+    args:
+      points: 5
+conditions: []

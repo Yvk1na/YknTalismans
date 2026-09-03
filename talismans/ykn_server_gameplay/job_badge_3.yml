@@ -1,0 +1,40 @@
+name: "&5百业勋章 III"
+description:
+  - "&a生产技能经验 +9%"
+  - "&a幸运 +7"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: job_badge_2
+item: diamond_chestplate
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:job_badge_2
+  - diamond_block
+  - talismans:job_badge_2
+
+  - diamond_block
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - diamond_block
+
+  - talismans:job_badge_2
+  - diamond_block
+  - talismans:job_badge_2
+effects:
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.09
+      skills:
+        - farming
+        - foraging
+        - mining
+        - fishing
+        - excavation
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 7
+conditions: []

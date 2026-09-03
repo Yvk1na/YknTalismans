@@ -1,0 +1,42 @@
+name: "&d丰收徽记 V"
+description:
+  - "&7携带时获得属性加成："
+  - "&2+15 幸运"
+  - "&a+15% 农耕技能经验"
+  - ""
+  - "&e需要农耕等级 95"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&d神话护符"
+higherLevelOf: harvest_emblem_4
+item: netherite_hoe
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:harvest_emblem_4
+  - enchanted_golden_apple
+  - talismans:harvest_emblem_4
+
+  - enchanted_golden_apple
+  - ecoitems:talisman_core_3 ? nether_star
+  - enchanted_golden_apple
+
+  - talismans:harvest_emblem_4
+  - enchanted_golden_apple
+  - talismans:harvest_emblem_4
+effects:
+  - id: add_stat
+    args:
+      stat: luck
+      amount: 15
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.15
+      skills:
+        - farming
+conditions:
+  - id: has_skill_level
+    args:
+      skill: farming
+      level: 95

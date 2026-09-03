@@ -1,0 +1,47 @@
+name: "&9斗士勋章 II"
+description:
+  - "&7携带时获得属性加成："
+  - "&c+7 力量"
+  - "&4+4% 暴击伤害"
+  - "&a+4% 战斗技能经验"
+  - ""
+  - "&e需要战斗等级 25"
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: fighter_medal_1
+item: iron_sword
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:fighter_medal_1
+  - blaze_rod
+  - talismans:fighter_medal_1
+
+  - blaze_rod
+  - ecoitems:talisman_core_1 ? ender_eye
+  - blaze_rod
+
+  - talismans:fighter_medal_1
+  - blaze_rod
+  - talismans:fighter_medal_1
+effects:
+  - id: add_stat
+    args:
+      stat: strength
+      amount: 7
+  - id: add_stat
+    args:
+      stat: crit_damage
+      amount: 4
+  - id: skill_xp_multiplier
+    args:
+      multiplier: 1.04
+      skills:
+        - fighting
+conditions:
+  - id: has_skill_level
+    args:
+      skill: fighting
+      level: 25

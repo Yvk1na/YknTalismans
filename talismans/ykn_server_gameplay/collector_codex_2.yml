@@ -1,0 +1,39 @@
+name: "&9收藏家图鉴 II"
+description:
+  - "&6物品掉落数量 +3%"
+  - "&a物品吸取范围 4格"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: collector_codex_1
+item: barrel
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:collector_codex_1
+  - gold_ingot
+  - talismans:collector_codex_1
+
+  - gold_ingot
+  - ecoitems:talisman_core_1 ? ender_eye
+  - gold_ingot
+
+  - talismans:collector_codex_1
+  - gold_ingot
+  - talismans:collector_codex_1
+effects:
+  - id: multiply_drops
+    args:
+      multiplier: 1.03
+    triggers:
+      - block_item_drop
+      - entity_item_drop
+      - catch_fish
+      - shear
+  - id: item_magnet
+    args:
+      radius: 4
+      pull_strength: 0.25
+conditions: []

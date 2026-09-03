@@ -1,0 +1,32 @@
+name: "&a战争契约 I"
+description:
+  - "&c造成伤害 +1%"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&a少见的护符"
+item: stone_sword
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - rotten_flesh
+  - iron_ingot
+  - rotten_flesh
+
+  - iron_ingot
+  - ecoitems:talisman_core_1 ? ender_eye
+  - iron_ingot
+
+  - rotten_flesh
+  - iron_ingot
+  - rotten_flesh
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: 1.01
+    triggers:
+      - melee_attack
+      - bow_attack
+      - trident_attack
+conditions: []

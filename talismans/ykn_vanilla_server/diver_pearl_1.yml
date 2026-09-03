@@ -1,0 +1,28 @@
+name: "&8潜水者之珠 I"
+description:
+  - "&b水下呼吸效率 +1"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&8普通护符"
+item: prismarine_shard
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - kelp
+  - prismarine_shard
+  - kelp
+
+  - prismarine_shard
+  - ecoitems:talisman_core_1 ? ender_eye
+  - prismarine_shard
+
+  - kelp
+  - prismarine_shard
+  - kelp
+effects:
+  - id: oxygen_bonus
+    args:
+      amount: 1
+conditions: []

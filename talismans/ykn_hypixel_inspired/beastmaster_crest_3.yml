@@ -1,0 +1,39 @@
+name: "&5驯兽师冠徽 III"
+description:
+  - "&c对首领伤害 +7%"
+  - "&c最大生命 +3"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&5史诗护符"
+higherLevelOf: beastmaster_crest_2
+item: golden_horse_armor
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:beastmaster_crest_2
+  - gold_block
+  - talismans:beastmaster_crest_2
+
+  - gold_block
+  - ecoitems:talisman_core_2 ? heart_of_the_sea
+  - gold_block
+
+  - talismans:beastmaster_crest_2
+  - gold_block
+  - talismans:beastmaster_crest_2
+effects:
+  - id: damage_multiplier
+    args:
+      multiplier: 1.07
+    filters:
+      is_boss: true
+    triggers:
+      - melee_attack
+      - bow_attack
+      - trident_attack
+  - id: bonus_health
+    args:
+      health: 3
+conditions: []

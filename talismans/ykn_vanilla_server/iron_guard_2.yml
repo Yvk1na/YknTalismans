@@ -1,0 +1,29 @@
+name: "&9钢铁护印 II"
+description:
+  - "&9护甲值 +2"
+  - ""
+  - "&8同系列仅最高阶生效"
+  - ""
+  - "&9稀有护符"
+higherLevelOf: iron_guard_1
+item: iron_chestplate
+craftable: true
+crafting-permission: []
+shapeless: false
+recipe:
+  - talismans:iron_guard_1
+  - iron_block
+  - talismans:iron_guard_1
+
+  - iron_block
+  - ecoitems:talisman_core_1 ? ender_eye
+  - iron_block
+
+  - talismans:iron_guard_1
+  - iron_block
+  - talismans:iron_guard_1
+effects:
+  - id: armor
+    args:
+      points: 2
+conditions: []
