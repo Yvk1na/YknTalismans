@@ -11,7 +11,8 @@ def serverRoot = providers.gradleProperty('serverRoot')
 def originalPlugin = [
         file("${serverRoot}/plugins/Talismans-2026.31.jar"),
         file("${serverRoot}/plugins/Talismans-2026.31-admin.jar"),
-        file("${serverRoot}/plugins/Talismans-Ykn-1.1.jar")
+        file("${serverRoot}/plugins/Talismans-Ykn-1.1.jar"),
+        file("${serverRoot}/plugins/YknTalismans-1.1.jar")
 ].find { it.isFile() }
 
 if (originalPlugin == null) {
@@ -28,10 +29,17 @@ sourceSets {
     main {
         java {
             srcDirs = ['com']
+            include 'willfp/talismans/TalismansPlugin.java'
+            include 'willfp/talismans/TalismansPluginKt.java'
             include 'willfp/talismans/command/CommandTalismans.java'
             include 'willfp/talismans/command/CommandAdmin.java'
+            include 'willfp/talismans/command/CommandBag.java'
+            include 'willfp/talismans/command/CommandPlus.java'
+            include 'willfp/talismans/command/CommandReduce.java'
             include 'willfp/talismans/admin/**/*.java'
             include 'willfp/talismans/display/TalismanDisplay.java'
+            include 'willfp/talismans/bag/TalismanBag.java'
+            include 'willfp/talismans/bag/TalismanBagDeposits.java'
             include 'willfp/talismans/talismans/util/BlockPlaceListener.java'
         }
         resources.srcDirs = []
@@ -59,12 +67,15 @@ tasks.jar {
 
 tasks.register('patchedJar', Jar) {
     dependsOn tasks.classes
-    archiveFileName = 'Talismans-Ykn-1.1.jar'
+    archiveFileName = 'YknTalismans-1.1.jar'
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
     from(sourceSets.main.output)
     from('.') {
         include 'plugin.yml'
+        include 'eco.yml'
+        include 'config.yml'
+        include 'lang.yml'
         include 'talismans/**/*.yml'
     }
     from(zipTree(originalPlugin)) {

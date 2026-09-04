@@ -6,12 +6,12 @@ import com.willfp.talismans.TalismansPluginKt;
 import java.util.List;
 import org.bukkit.command.CommandSender;
 
-/** Root command for Talismans. */
+/** Root command for YknTalismans. */
 public final class CommandTalismans extends PluginCommand {
     public static final CommandTalismans INSTANCE = new CommandTalismans();
 
     private CommandTalismans() {
-        super(TalismansPluginKt.getPlugin(), "talismans", "talismans.command.talismans", false);
+        super(TalismansPluginKt.getPlugin(), "ykntalismans", "talismans.command.talismans", false);
     }
 
     @Override
@@ -21,13 +21,15 @@ public final class CommandTalismans extends PluginCommand {
 
     @Override
     public List<String> getAliases() {
-        return List.of("talis", "tal", "talismen", "talisman");
+        return List.of();
     }
 
     static {
         INSTANCE.addSubcommand((CommandBase) CommandReload.INSTANCE)
                 .addSubcommand((CommandBase) CommandGive.INSTANCE)
                 .addSubcommand((CommandBase) CommandBag.INSTANCE)
+                .addSubcommand((CommandBase) CommandPlus.INSTANCE)
+                .addSubcommand((CommandBase) CommandReduce.INSTANCE)
                 .addSubcommand((CommandBase) CommandAdmin.INSTANCE);
     }
 }

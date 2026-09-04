@@ -3,7 +3,7 @@ environment:
     value: 2026.31
 
 options:
-  resource-id: 611
-  bstats-id: 9865
+  resource-id: 0
+  bstats-id: 0
   color: "&6"
   uses-reflective-reload: false

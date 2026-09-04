@@ -1,23 +1,19 @@
-﻿name: Talismans
-version: 1.1
-prefix: Talismans-Ykn
+name: YknTalismans
+version: "1.1"
+prefix: YknTalismans
 main: com.willfp.talismans.TalismansPlugin
 api-version: 1.21.10
-authors: [ Auxilor ]
-website: willfp.com
+authors: [ Auxilor, Yvk1na ]
+website: https://github.com/Yvk1na/YknTalismans
+provides: [ Talismans ]
 depend:
   - eco
 softdepend:
   - libreforge
 commands:
-  talismans:
+  ykntalismans:
     description: Parent command.
     permission: talismans.command.talismans
-    aliases:
-      - talisman
-      - talis
-      - talismen
-      - tal
 
 permissions:
   talismans.*:
@@ -27,6 +23,8 @@ permissions:
       talismans.command.talismans: true
       talismans.command.give: true
       talismans.command.bag: true
+      talismans.command.plus: true
+      talismans.command.reduce: true
       talismans.command.reload: true
       talismans.command.admin: true
       talismans.fromtable.*: true
@@ -35,16 +33,22 @@ permissions:
     description: Allows reloading the config
     default: op
   talismans.command.give:
-    description: Allows the use of /talismans give.
+    description: Allows the use of /ykntalismans give.
     default: op
   talismans.command.bag:
-    description: Allows the use of /talismans bag.
+    description: Allows the use of /ykntalismans bag.
     default: true
+  talismans.command.plus:
+    description: Allows increasing the player's own talisman bag capacity.
+    default: op
+  talismans.command.reduce:
+    description: Allows reducing the player's own talisman bag capacity.
+    default: op
   talismans.command.admin:
     description: Allows the use of the talisman administration GUI.
     default: op
   talismans.command.talismans:
-    description: Allows the use of /talismans
+    description: Allows the use of /ykntalismans
     default: true
   talismans.fromtable.*:
     description: Allows crafting all talismans

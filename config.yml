@@ -15,7 +15,7 @@ talisman-limit: 54  # Set to 0 to use permission-based limits instead
 offhand-only: false # If talismans or shulkers of talismans need to be in the offhand to work
 
 bag:
-  title: "Talisman Bag"
-  blocked-item: black_stained_glass_pane name:"&cYour talisman bag is not big enough!"
+  title: "护符袋"
+  blocked-item: black_stained_glass_pane name:"&c该护符格尚未解锁！"
   blocked-item-lore: [ ]
-  size: 0 # Set to 0 to use permission-based bag size instead
+  size: 45 # Default slot count for players without saved bag capacity

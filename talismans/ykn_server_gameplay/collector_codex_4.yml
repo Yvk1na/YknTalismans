@@ -1,7 +1,6 @@
 name: "&6收藏家图鉴 IV"
 description:
   - "&6物品掉落数量 +12%"
-  - "&a物品吸取范围 11格"
   - ""
   - "&8同系列仅最高阶生效"
   - ""
@@ -32,8 +31,4 @@ effects:
       - entity_item_drop
       - catch_fish
       - shear
-  - id: item_magnet
-    args:
-      radius: 11
-      pull_strength: 0.60
 conditions: []

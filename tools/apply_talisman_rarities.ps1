@@ -31,7 +31,7 @@ $baseRarity = @{
     angler_reel = 1; brewer_hourglass = 0; bounty_satchel = 1
     merchant_seal = 2; trader_writ = 1; war_contract = 1
 
-    feather_legacy = 0; potion_affinity = 0; magnetic_core = 1
+    feather_legacy = 0; potion_affinity = 0
     healing_emblem = 0; mineral_charm = 1; beastmaster_crest = 1
 
     island_heart = 1; void_anchor = 2; maze_compass = 1

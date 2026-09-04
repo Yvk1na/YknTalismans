@@ -10,9 +10,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -69,7 +72,8 @@ public final class AdminGuiManager implements Listener {
 
     private static void openList(Player player, int requestedPage) {
         List<Talisman> talismans = Talismans.values();
-        int pageCount = Math.max(1, (talismans.size() + PAGE_SIZE - 1) / PAGE_SIZE);
+        List<List<Talisman>> pages = buildListPages(talismans);
+        int pageCount = pages.size();
         int page = Math.max(0, Math.min(requestedPage, pageCount - 1));
         ListHolder holder = new ListHolder(page, pageCount);
         Inventory inventory = Bukkit.createInventory(
@@ -80,11 +84,12 @@ public final class AdminGuiManager implements Listener {
         holder.inventory = inventory;
         fill(inventory);
 
-        int fromIndex = page * PAGE_SIZE;
-        int toIndex = Math.min(fromIndex + PAGE_SIZE, talismans.size());
-        for (int index = fromIndex; index < toIndex; index++) {
-            Talisman talisman = talismans.get(index);
-            int slot = index - fromIndex;
+        List<Talisman> pageTalismans = pages.get(page);
+        for (int slot = 0; slot < pageTalismans.size(); slot++) {
+            Talisman talisman = pageTalismans.get(slot);
+            if (talisman == null) {
+                continue;
+            }
             holder.talismansBySlot.put(slot, talisman);
             inventory.setItem(slot, listIcon(talisman));
         }
@@ -101,6 +106,87 @@ public final class AdminGuiManager implements Listener {
         }
 
         player.openInventory(inventory);
+    }
+
+    private static List<List<Talisman>> buildListPages(List<Talisman> talismans) {
+        Map<Talisman, SeriesPosition> positions = new HashMap<>();
+        Map<Talisman, List<Talisman>> talismansByRoot = new HashMap<>();
+        for (Talisman talisman : talismans) {
+            SeriesPosition position = findSeriesPosition(talisman);
+            positions.put(talisman, position);
+            talismansByRoot.computeIfAbsent(position.root(), ignored -> new ArrayList<>()).add(talisman);
+        }
+
+        List<List<Talisman>> series = new ArrayList<>(talismansByRoot.values());
+        for (List<Talisman> family : series) {
+            family.sort(
+                    Comparator.comparingInt((Talisman talisman) -> positions.get(talisman).depth())
+                            .thenComparing(Talisman::getID)
+            );
+        }
+        series.sort(
+                Comparator.comparingInt((List<Talisman> family) -> rarityRank(positions.get(family.get(0)).root()))
+                        .thenComparing(family -> positions.get(family.get(0)).root().getID())
+        );
+
+        List<List<Talisman>> pages = new ArrayList<>();
+        List<Talisman> currentPage = new ArrayList<>(PAGE_SIZE);
+        for (List<Talisman> family : series) {
+            int usedColumns = currentPage.size() % 9;
+            int rowPadding = usedColumns != 0 && family.size() > 9 - usedColumns
+                    ? 9 - usedColumns
+                    : 0;
+            if (!currentPage.isEmpty()
+                    && currentPage.size() + rowPadding + family.size() > PAGE_SIZE) {
+                pages.add(currentPage);
+                currentPage = new ArrayList<>(PAGE_SIZE);
+                rowPadding = 0;
+            }
+            for (int padding = 0; padding < rowPadding; padding++) {
+                currentPage.add(null);
+            }
+            currentPage.addAll(family);
+        }
+        if (!currentPage.isEmpty() || pages.isEmpty()) {
+            pages.add(currentPage);
+        }
+        return pages;
+    }
+
+    private static SeriesPosition findSeriesPosition(Talisman talisman) {
+        Talisman current = talisman;
+        int depth = 0;
+        Set<Talisman> visited = new HashSet<>();
+        while (visited.add(current)) {
+            Talisman lowerLevel = current.getLowerLevel();
+            if (lowerLevel == null) {
+                return new SeriesPosition(current, depth);
+            }
+            current = lowerLevel;
+            depth++;
+        }
+
+        // Keep a malformed cyclic chain isolated instead of hanging the admin menu.
+        return new SeriesPosition(talisman, 0);
+    }
+
+    private static int rarityRank(Talisman talisman) {
+        for (String line : talisman.getDescription()) {
+            String rarity = ChatColor.stripColor(color(line)).trim();
+            int rank = switch (rarity) {
+                case "普通护符" -> 0;
+                case "少见的护符" -> 1;
+                case "稀有护符" -> 2;
+                case "史诗护符" -> 3;
+                case "传说护符" -> 4;
+                case "神话护符" -> 5;
+                default -> -1;
+            };
+            if (rank >= 0) {
+                return rank;
+            }
+        }
+        return Integer.MAX_VALUE;
     }
 
     private static ItemStack listIcon(Talisman talisman) {
@@ -414,6 +500,9 @@ public final class AdminGuiManager implements Listener {
 
     private static String color(String text) {
         return ChatColor.translateAlternateColorCodes('&', text);
+    }
+
+    private record SeriesPosition(Talisman root, int depth) {
     }
 
     private static final class ListHolder implements InventoryHolder {

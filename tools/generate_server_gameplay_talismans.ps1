@@ -122,7 +122,6 @@ $families = @(
         Materials = @('rabbit_hide', 'gold_ingot', 'shulker_shell', 'ender_chest', 'nether_star')
         Effects = @(
             [pscustomobject]@{ Kind = 'simple'; Id = 'multiply_drops'; Arg = 'multiplier'; Values = @('1.01', '1.03', '1.07', '1.12', '1.20'); Lore = '物品掉落数量'; LoreValues = @('+1%', '+3%', '+7%', '+12%', '+20%'); Color = '&6'; Triggers = @('block_item_drop', 'entity_item_drop', 'catch_fish', 'shear') }
-            [pscustomobject]@{ Kind = 'simple'; Id = 'item_magnet'; Arg = 'radius'; Values = @('2', '4', '7', '11', '16'); ExtraArg = 'pull_strength'; ExtraValues = @('0.15', '0.25', '0.40', '0.60', '0.85'); Lore = '物品吸取范围'; LoreValues = @('2格', '4格', '7格', '11格', '16格'); Color = '&a' }
         )
     }
     [pscustomobject]@{

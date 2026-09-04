@@ -24,4 +24,10 @@ public final class TalismansPluginKt {
       Intrinsics.throwUninitializedPropertyAccessException("plugin");
       return null;
    }
+
+   /** Java-visible equivalent of Kotlin's generated private-property accessor. */
+   public static final void access$setPlugin$p(@NotNull TalismansPlugin value) {
+      Intrinsics.checkNotNullParameter(value, "value");
+      plugin = value;
+   }
 }

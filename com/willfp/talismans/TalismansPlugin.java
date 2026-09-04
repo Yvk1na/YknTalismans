@@ -5,6 +5,7 @@ import com.willfp.eco.core.bstats.EcoMetricsChart.SimplePie;
 import com.willfp.eco.core.bstats.EcoMetricsChart.SingleLine;
 import com.willfp.eco.core.command.impl.PluginCommand;
 import com.willfp.eco.core.display.DisplayModule;
+import com.willfp.eco.core.factory.NamespacedKeyFactory;
 import com.willfp.eco.core.items.Items;
 import com.willfp.eco.core.items.tag.ItemTag;
 import com.willfp.eco.core.registry.Registrable;
@@ -29,6 +30,7 @@ import com.willfp.talismans.talismans.util.BlockPlaceListener;
 import com.willfp.talismans.talismans.util.DiscoverRecipeListener;
 import com.willfp.talismans.talismans.util.TalismanChecks;
 import java.util.List;
+import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
 import org.bukkit.inventory.Inventory;
@@ -68,20 +70,29 @@ import org.jetbrains.annotations.NotNull;
    "SMAP\nTalismansPlugin.kt\nKotlin\n*S Kotlin\n*F\n+ 1 TalismansPlugin.kt\ncom/willfp/talismans/TalismansPlugin\n+ 2 HolderProvider.kt\ncom/willfp/libreforge/HolderProviderKt\n*L\n1#1,120:1\n129#2,9:121\n155#2,6:130\n*S KotlinDebug\n*F\n+ 1 TalismansPlugin.kt\ncom/willfp/talismans/TalismansPlugin\n*L\n59#1:121,9\n63#1:130,6\n*E\n"
 )
 public final class TalismansPlugin extends LibreforgePlugin {
+   /* Keep the original namespace for existing items, bag data and recipes. */
+   private static final NamespacedKeyFactory TALISMANS_KEY_FACTORY = key -> new NamespacedKey("talismans", key);
+
    public TalismansPlugin() {
       TalismansPluginKt.access$setPlugin$p(this);
       TalismanChecks.registerItemStackProvider(TalismansPlugin::_init_$lambda$0);
-      TalismanChecks.registerItemStackProvider(TalismansPlugin::_init_$lambda$1);
-      TalismanChecks.registerItemStackProvider(TalismansPlugin::_init_$lambda$2);
+      TalismanChecks.registerItemStackProvider(player -> _init_$lambda$1(this, player));
+      TalismanChecks.registerItemStackProvider(player -> _init_$lambda$2(this, player));
+   }
+
+   @NotNull
+   @Override
+   public NamespacedKeyFactory getNamespacedKeyFactory() {
+      return TALISMANS_KEY_FACTORY;
    }
 
    protected void handleLoad() {
       Items.registerTag((ItemTag)TalismanTag.INSTANCE);
-      Conditions.INSTANCE.register((Registrable)ConditionHasTalisman.INSTANCE);
+      Conditions.INSTANCE.register(ConditionHasTalisman.INSTANCE);
    }
 
    protected void handleEnable() {
-      SlotTypes.INSTANCE.register((Registrable)SlotTypeTalisman.INSTANCE);
+      SlotTypes.INSTANCE.register(SlotTypeTalisman.INSTANCE);
       int $i$f$registerSpecificHolderProvider = 0;
       HolderProviderKt.registerHolderProvider(new TalismansPlugin$handleEnable$$inlined$registerSpecificHolderProvider$1());
       $i$f$registerSpecificHolderProvider = 0;
@@ -106,7 +117,7 @@ public final class TalismansPlugin extends LibreforgePlugin {
 
    @NotNull
    protected List<Listener> loadListeners() {
-      Listener[] var1 = new Listener[]{BlockPlaceListener.INSTANCE, DiscoverRecipeListener.INSTANCE};
+      Listener[] var1 = new Listener[]{BlockPlaceListener.INSTANCE, DiscoverRecipeListener.INSTANCE, TalismanBag.INSTANCE};
       return CollectionsKt.listOf(var1);
    }
 
@@ -119,12 +130,12 @@ public final class TalismansPlugin extends LibreforgePlugin {
    public List<EcoMetricsChart> getCustomCharts() {
       EcoMetricsChart[] var1 = new EcoMetricsChart[]{
          new SingleLine("total_talismans", TalismansPlugin::getCustomCharts$lambda$0),
-         new SimplePie("discover_recipes", TalismansPlugin::getCustomCharts$lambda$1),
-         new SimplePie("read_inventory", TalismansPlugin::getCustomCharts$lambda$2),
-         new SimplePie("read_enderchest", TalismansPlugin::getCustomCharts$lambda$3),
-         new SimplePie("read_shulkerboxes", TalismansPlugin::getCustomCharts$lambda$4),
-         new SimplePie("top_level_only", TalismansPlugin::getCustomCharts$lambda$5),
-         new SimplePie("offhand_only", TalismansPlugin::getCustomCharts$lambda$6)
+         new SimplePie("discover_recipes", () -> getCustomCharts$lambda$1(this)),
+         new SimplePie("read_inventory", () -> getCustomCharts$lambda$2(this)),
+         new SimplePie("read_enderchest", () -> getCustomCharts$lambda$3(this)),
+         new SimplePie("read_shulkerboxes", () -> getCustomCharts$lambda$4(this)),
+         new SimplePie("top_level_only", () -> getCustomCharts$lambda$5(this)),
+         new SimplePie("offhand_only", () -> getCustomCharts$lambda$6(this))
       };
       return CollectionsKt.listOf(var1);
    }

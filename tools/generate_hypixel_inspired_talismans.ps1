@@ -42,14 +42,6 @@ $families = @(
         )
     }
     [pscustomobject]@{
-        Id = 'magnetic_core'; Name = '磁引核心'; TierCount = 4; BaseRarity = 1; Base = 'redstone'
-        Icons = @('compass', 'lodestone', 'recovery_compass', 'nether_star')
-        Materials = @('emerald', 'redstone_block', 'lodestone', 'nether_star')
-        Effects = @(
-            [pscustomobject]@{ Id = 'item_magnet'; Arg = 'radius'; Values = @('4', '8', '12', '16'); ExtraArg = 'pull_strength'; ExtraValues = @('0.25', '0.40', '0.60', '0.80'); Lore = '物品吸取范围'; LoreValues = @('4格', '8格', '12格', '16格'); Color = '&a' }
-        )
-    }
-    [pscustomobject]@{
         Id = 'healing_emblem'; Name = '治愈圣徽'; TierCount = 4; BaseRarity = 0; Base = 'lily_pad'
         Icons = @('lily_pad', 'glistering_melon_slice', 'ghast_tear', 'totem_of_undying')
         Materials = @('lily_pad', 'glistering_melon_slice', 'ghast_tear', 'totem_of_undying')
